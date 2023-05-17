@@ -1,5 +1,6 @@
-.vs/
-.vscode/
+.vs*
+.vs*/
 Library/
 Temp/
 UserSettings/
+Logs/
