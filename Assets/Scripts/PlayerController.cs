@@ -7,9 +7,10 @@ public class PlayerController : MonoBehaviour
     private bool isMoving;
 
     public float speed;
+    public VectorValue startingPosition;
     private Vector2 input;
 
-    private Rigidbody2D myRigidBody;
+    //private Rigidbody2D myRigidBody;
 
     private Animator animator;
 
@@ -20,7 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        myRigidBody = GetComponent<Rigidbody2D>();
+        transform.position = startingPosition.initialValue;
+        //myRigidBody = GetComponent<Rigidbody2D>();
     }
 
     private void Awake()
