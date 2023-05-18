@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogBox;
+    [SerializeField] GameObject dialogTitleBox;
     [SerializeField] Text dialogText;
+    [SerializeField] Text dialogTitle;
     [SerializeField] int lettersPerSecond;
 
     public event Action OnShowDialog;
@@ -15,7 +17,7 @@ public class DialogManager : MonoBehaviour
 
     Dialog dialog;
     int currentLine = 0;
-    bool isTyping;
+    bool isTypingDialog, isTypingTitle;
 
     public IEnumerator ShowDialog(Dialog dialog)
     {
@@ -23,12 +25,15 @@ public class DialogManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         OnShowDialog?.Invoke();
-
         this.dialog = dialog;
         Debug.Log(dialog == null ? "True" : "False");
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
-
+        if (dialog.Title != "")
+        {
+            dialogTitleBox.SetActive(true);
+            StartCoroutine(TypeDialogTitle(dialog.Title));
+        }
     }
 
     public Action GetOnCloseDialog()
@@ -38,7 +43,7 @@ public class DialogManager : MonoBehaviour
 
     public void HandleUpdate(Action onCloseDialog)
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !isTyping)
+        if (Input.GetKeyDown(KeyCode.Z) && !isTypingDialog && !isTypingTitle)
         {
             ++currentLine;
             Debug.Log(dialog == null ? "True" : "False");
@@ -50,6 +55,7 @@ public class DialogManager : MonoBehaviour
             {
                 currentLine = 0;
                 dialogBox.SetActive(false);
+                dialogTitleBox.SetActive(false);
                 onCloseDialog?.Invoke();
             }
         }
@@ -57,16 +63,29 @@ public class DialogManager : MonoBehaviour
 
     public IEnumerator TypeDialog(string line)
     {
-        isTyping = true;
-
+        isTypingDialog = true;
 
         dialogText.text = "";
         foreach (var letter in line.ToCharArray())
         {
+            Debug.Log(line);
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
 
-        isTyping = false;
+        isTypingDialog = false;
+    }
+
+    public IEnumerator TypeDialogTitle(string title)
+    {
+        isTypingTitle = true;
+
+        dialogTitle.text = "";
+        foreach (var letter in title.ToCharArray())
+        {
+            dialogTitle.text += letter;
+            yield return new WaitForSeconds(1f / lettersPerSecond);
+        }
+        isTypingTitle = false;
     }
 }
