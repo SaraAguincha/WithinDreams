@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -58,6 +60,24 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
             Interact(dialogManager);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            startingPosition.initialValue = new Vector2(transform.position.x, transform.position.y);
+            
+            string sceneName = SceneManager.GetActiveScene().name;
+
+            print(sceneName.Contains("Dream"));
+            if (sceneName.Contains("Dream"))
+            {
+                sceneName = sceneName.Remove(sceneName.Length - 6);
+            }
+            else
+            {
+                sceneName = sceneName + " Dream";
+            }
+            //print(sceneName);
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
     void Interact(DialogManager dialogManager)

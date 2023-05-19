@@ -7,8 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Child's Room.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 72926dccbdfeeff468913fa1ec78698d
   - enabled: 1
     path: Assets/Scenes/House.unity
     guid: b67e04acfc9dc1b4f9016cba940fc68f
+  - enabled: 1
+    path: Assets/Scenes/Child's Room Dream.unity
+    guid: 7280e0ed613450b42ab44c58f26415ad
   m_configObjects: {}
