@@ -70,6 +70,7 @@ namespace Inventory.UI
             int index = listOfUIItems.IndexOf(inventoryItemUI);
             if (index == -1) return;
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
+            HandleItemSelection(inventoryItemUI);
         }
 
         private void ResetDraggedItem()
@@ -131,6 +132,15 @@ namespace Inventory.UI
             itemDescription.SetDescription(itemImage, name, description);
             DeselectAllItems();
             listOfUIItems[itemIndex].Select();
+        }
+
+        internal void ResetAllItems()
+        {
+            foreach (var item in listOfUIItems)
+            {
+                item.ResetData();
+                item.Deselect();
+            }
         }
     }
 }

@@ -458,6 +458,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 76108916}
   inventoryData: {fileID: 11400000, guid: a8a0a8952b93d5b469c11daa485d3635, type: 2}
+  initialItems:
+  - quantity: 5
+    item: {fileID: 11400000, guid: e783569a692b2d54193b58a0cb3d912b, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 200e7a97cf3b88543adaf00b75a4ad83, type: 2}
+  - quantity: 2
+    item: {fileID: 11400000, guid: e783569a692b2d54193b58a0cb3d912b, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
