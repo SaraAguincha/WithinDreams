@@ -58,7 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\InteractableObjects\RoomMirror.cs" />
     <Compile Include="Assets\Scripts\InterfaceInteractable.cs" />
+    <Compile Include="Assets\Scripts\UI\UIInventoryDescription.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\UI\MouseFollower.cs" />
     <Compile Include="Assets\Scripts\VectorValue.cs" />
     <Compile Include="Assets\Scripts\InventoryController.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventoryItem.cs" />
@@ -68,8 +70,8 @@
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventoryPage.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\UI\UIInventoryDescription.cs" />
-    <Compile Include="Assets\Scripts\UI\MouseFollower.cs" />
+    <Compile Include="Assets\Scripts\Model\ItemSO.cs" />
+    <Compile Include="Assets\Scripts\Model\InventorySO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

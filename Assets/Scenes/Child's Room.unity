@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 76108916}
-  inventorySize: 5
+  inventoryData: {fileID: 11400000, guid: a8a0a8952b93d5b469c11daa485d3635, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,6 +2211,10 @@ PrefabInstance:
       propertyPath: title
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 8694158973829524460, guid: 18234d0f690c7f244a3b00388bd9e1c5, type: 3}
+      propertyPath: image2
+      value: 
+      objectReference: {fileID: 21300000, guid: 01dfd2a65ce90c94f918d9863c099a75, type: 3}
     - target: {fileID: 8694158973829524460, guid: 18234d0f690c7f244a3b00388bd9e1c5, type: 3}
       propertyPath: quantity
       value: 1
