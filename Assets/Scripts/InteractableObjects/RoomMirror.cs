@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RoomMirror : MonoBehaviour, Interactable
 {
-    [SerializeField] Dialog dialog;
-    public void Interact(DialogManager dialogManager)
+    [SerializeField] List<Dialog> dialogues;
+    public void Interact(DialogueManager dialogueManager)
     {
-        StartCoroutine(dialogManager.ShowDialog(dialog));
+        StartCoroutine(dialogueManager.ShowDialogue(dialogues));
     }
 }

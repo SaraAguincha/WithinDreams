@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface Interactable
 {
-    void Interact(DialogManager dialogManager);
+    void Interact(DialogueManager dialogueManager);
 
 }

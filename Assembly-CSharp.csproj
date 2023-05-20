@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
-    <Compile Include="Assets\Scripts\DialogManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventoryPage.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>

@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask colidableLayer;
     public LayerMask interactableLayer;
 
-    [SerializeField] DialogManager dialogManager;
+    [SerializeField] DialogueManager dialogueManager;
 
     private void Start()
     {
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isMoving", isMoving);
 
         if (Input.GetKeyDown(KeyCode.Z))
-            Interact(dialogManager);
+            Interact(dialogueManager);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Interact(DialogManager dialogManager)
+    void Interact(DialogueManager dialogManager)
     {
         var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         var interactPos = transform.position + facingDir;
@@ -116,6 +116,6 @@ public class PlayerController : MonoBehaviour
         return true;
     }
 
-    public DialogManager GetDialogManager() { return dialogManager; }
+    public DialogueManager GetDialogManager() { return dialogueManager; }
 
 }
