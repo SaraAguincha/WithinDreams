@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4652501233939544804}
   - component: {fileID: 4652501233939544807}
   - component: {fileID: 4652501233939544806}
+  - component: {fileID: -6329219616558551590}
   m_Layer: 0
   m_Name: SceneTransition
   m_TagString: Untagged
@@ -74,3 +75,24 @@ MonoBehaviour:
   sceneToLoad: House
   playerPosition: {x: 2, y: 8}
   playerInfo: {fileID: 11400000, guid: 63d25a0c12b9511468b04fe3481ecc82, type: 2}
+--- !u!50 &-6329219616558551590
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4652501233939544801}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

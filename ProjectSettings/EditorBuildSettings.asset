@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Child's Room Dream.unity
     guid: 7280e0ed613450b42ab44c58f26415ad
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 956ec4a3826660e4eb0ed2ca1aacff56
+  - enabled: 1
+    path: Assets/Scenes/Parent's Room.unity
+    guid: 99b59ec1f7e51dd44a51ebe52cc4f367
   m_configObjects: {}
