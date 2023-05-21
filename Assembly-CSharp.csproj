@@ -64,8 +64,10 @@
     <Compile Include="Assets\Scripts\UI\MouseFollower.cs" />
     <Compile Include="Assets\Scripts\VectorValue.cs" />
     <Compile Include="Assets\Scripts\InventoryController.cs" />
+    <Compile Include="Assets\Scripts\PickUpSystem\Item.cs" />
     <Compile Include="Assets\Scripts\Model\InventorySO.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventoryItem.cs" />
+    <Compile Include="Assets\Scripts\PickUpSystem\PickUpSystem.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
