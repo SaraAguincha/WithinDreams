@@ -1570,6 +1570,54 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
+--- !u!1 &1126576099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1126576101}
+  - component: {fileID: 1126576100}
+  m_Layer: 0
+  m_Name: GameSaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1126576100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126576099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7caa52bf71e45724da31e4871b81a85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 11400000, guid: a8a0a8952b93d5b469c11daa485d3635, type: 2}
+  - {fileID: 11400000, guid: c47763b7d404baf41a67f4596e74b948, type: 2}
+  - {fileID: 11400000, guid: d0c8a324aaa9ec84fb26d157e4680d61, type: 2}
+--- !u!4 &1126576101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126576099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.570763, y: 0.33253187, z: 11.255709}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1171992248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1626,8 +1674,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 942628199415306790, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: itemInstance
+      value: 
+      objectReference: {fileID: 11400000, guid: d0c8a324aaa9ec84fb26d157e4680d61, type: 2}
+    - target: {fileID: 942628199415306790, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
       propertyPath: <Quantity>k__BackingField
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 942628199415306790, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
       propertyPath: <InventoryItem>k__BackingField
@@ -6069,6 +6121,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple
       objectReference: {fileID: 0}
+    - target: {fileID: 942628199415306776, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 942628199415306776, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 942628199415306787, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -6113,6 +6173,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 942628199415306790, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 942628199415306790, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: itemInstance
+      value: 
+      objectReference: {fileID: 11400000, guid: c47763b7d404baf41a67f4596e74b948, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
 --- !u!114 &1687930886829771678 stripped

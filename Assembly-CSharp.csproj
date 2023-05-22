@@ -53,7 +53,7 @@
     <UnityVersion>2021.3.24f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Model\ItemSO.cs" />
@@ -61,8 +61,9 @@
     <Compile Include="Assets\Scripts\InterfaceInteractable.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventoryDescription.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\GameSaveManager.cs" />
     <Compile Include="Assets\Scripts\UI\MouseFollower.cs" />
-    <Compile Include="Assets\Scripts\VectorValue.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\VectorValue.cs" />
     <Compile Include="Assets\Scripts\InventoryController.cs" />
     <Compile Include="Assets\Scripts\PickUpSystem\Item.cs" />
     <Compile Include="Assets\Scripts\Model\InventorySO.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIInventoryPage.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\BooleanValue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

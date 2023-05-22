@@ -9,6 +9,10 @@ public class Item : MonoBehaviour
     public ItemSO InventoryItem { get; private set; }
 
     [field: SerializeField]
+
+    public BooleanValue itemInstance;
+
+    [field: SerializeField]
     public int Quantity { get; set; } = 1;
 
     [SerializeField]
@@ -19,6 +23,11 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
+        if (!itemInstance.getValue())
+        {
+            this.gameObject.SetActive(false);
+            return;
+        }
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
 
@@ -41,5 +50,6 @@ public class Item : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+        this.itemInstance.setFalse();
     }
 }
