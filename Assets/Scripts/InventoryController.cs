@@ -23,6 +23,14 @@ namespace Inventory
             PrepareInventoryData();
         }
 
+        private void OnDisable()
+        {
+            inventoryData.OnInventoryUpdated -= UpdateInventoryUI;
+            inventoryUI.OnDescriptionRequested -= HandleDescriptionRequest;
+            inventoryUI.OnSwapItems -= HandleSwapItems;
+            inventoryUI.OnStartDragging -= HandleDragging;
+        }
+
         private void PrepareInventoryData()
         {
             inventoryData.Initialize();
