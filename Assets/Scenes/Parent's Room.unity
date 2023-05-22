@@ -1098,6 +1098,11 @@ PrefabInstance:
       objectReference: {fileID: 1172172059}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: add3623b8a1f71643a0103b0505ecc0d, type: 3}
+--- !u!4 &750189144 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5714117588279068503, guid: add3623b8a1f71643a0103b0505ecc0d, type: 3}
+  m_PrefabInstance: {fileID: 750189143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &870347610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4102,7 +4107,7 @@ PrefabInstance:
     - target: {fileID: 631165261260934801, guid: c57482b142ec77948bc30999c0fcba8f, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 750189144}
     - target: {fileID: 631165261260934801, guid: c57482b142ec77948bc30999c0fcba8f, type: 3}
       propertyPath: maxPosition.x
       value: 3
