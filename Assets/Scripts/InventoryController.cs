@@ -49,14 +49,14 @@ namespace Inventory
             inventoryUI.OnDescriptionRequested += HandleDescriptionRequest;
             inventoryUI.OnSwapItems += HandleSwapItems;
             inventoryUI.OnStartDragging += HandleDragging;
-            inventoryUI.OnItemActionRequested += HandleItemActionRequest;
+            //inventoryUI.OnItemActionRequested += HandleItemActionRequest;
 
         }
 
-        private void HandleItemActionRequest(int itemIndex)
+        /*private void HandleItemActionRequest(int itemIndex)
         {
 
-        }
+        }*/
 
         private void HandleDragging(int itemIndex)
         {

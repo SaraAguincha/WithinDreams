@@ -23,7 +23,8 @@ namespace Inventory.UI
 
         private int currentlyDraggedItemIndex = -1;
 
-        public event Action<int> OnDescriptionRequested, OnItemActionRequested, OnStartDragging;
+        public event Action<int> OnDescriptionRequested, OnStartDragging;
+        //public event Action<int> OnItemActionRequested;
         public event Action<int, int> OnSwapItems;
 
         private void Awake()
@@ -43,7 +44,7 @@ namespace Inventory.UI
                 uiItem.OnItemBeginDrag += HandleBeginDrag;
                 uiItem.OnItemDroppedOn += HandleSwap;
                 uiItem.OnItemEndDrag += HandleEndDrag;
-                uiItem.OnRightMouseBtnClick += HandleShowItemActions;
+                //uiItem.OnRightMouseBtnClick += HandleShowItemActions;
             }
         }
 
@@ -55,10 +56,10 @@ namespace Inventory.UI
             }
         }
 
-        private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
+        /*private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
         {
 
-        }
+        }*/
 
         private void HandleEndDrag(UIInventoryItem inventoryItemUI)
         {
