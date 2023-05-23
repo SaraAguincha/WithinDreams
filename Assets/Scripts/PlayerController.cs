@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public VectorValue startingPosition;
     private Vector2 input;
+   
 
-    //private Rigidbody2D myRigidBody;
 
     private Animator animator;
 
@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         transform.position = startingPosition.initialValue;
-        //myRigidBody = GetComponent<Rigidbody2D>();
     }
 
     private void Awake()
@@ -80,7 +79,6 @@ public class PlayerController : MonoBehaviour
             {
                 sceneName = sceneName + " Dream";
             }
-            //print(sceneName);
             SceneManager.LoadScene(sceneName);
         }
     }
@@ -90,7 +88,6 @@ public class PlayerController : MonoBehaviour
         var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         var interactPos = transform.position + facingDir;
 
-        //Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
 
         var interactableCollider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
         var itemCollider = Physics2D.OverlapCircle(transform.position, 1f, itemLayer);
@@ -121,6 +118,7 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = targetPos;
         isMoving = false;
+        startingPosition.initialValue = new Vector2(transform.position.x, transform.position.y);
     }
 
     private bool IsWalkable(Vector3 targetPos)

@@ -1066,6 +1066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstScene: Child's Room
+  loadScene: {fileID: 11400000, guid: 89d3c77d9f8a883479add67dcf7e797d, type: 2}
 --- !u!1 &1588824494
 GameObject:
   m_ObjectHideFlags: 0

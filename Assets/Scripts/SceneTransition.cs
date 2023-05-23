@@ -8,11 +8,7 @@ public class SceneTransition : MonoBehaviour
     public string sceneToLoad;
     public Vector2 playerPosition;
     public VectorValue playerInfo;
-
-    // On triggering, some evaluations should be made. P.e In which state the game is
-    // Milestones
-    // TODO: fix camera weird movement when transitioning
-
+    public SceneName sceneInfo;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,6 +16,7 @@ public class SceneTransition : MonoBehaviour
         {
             playerInfo.initialValue = playerPosition;
             SceneManager.LoadScene(sceneToLoad);
+            sceneInfo.setSceneName(sceneToLoad);
         }
     }
 }

@@ -75,6 +75,7 @@ MonoBehaviour:
   sceneToLoad: House
   playerPosition: {x: 2, y: 8}
   playerInfo: {fileID: 11400000, guid: 63d25a0c12b9511468b04fe3481ecc82, type: 2}
+  sceneInfo: {fileID: 11400000, guid: 89d3c77d9f8a883479add67dcf7e797d, type: 2}
 --- !u!50 &-6329219616558551590
 Rigidbody2D:
   serializedVersion: 4
