@@ -1629,6 +1629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 942628199415306776, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 942628199415306787, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6122,6 +6126,10 @@ PrefabInstance:
       value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 942628199415306776, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 942628199415306776, guid: 48761c295bf814e4fbeebc57262feb66, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -6472,5 +6480,9 @@ PrefabInstance:
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 76108916}
+    - target: {fileID: 5714117588279068502, guid: add3623b8a1f71643a0103b0505ecc0d, type: 3}
+      propertyPath: itemLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: add3623b8a1f71643a0103b0505ecc0d, type: 3}

@@ -1,3 +1,4 @@
+using Inventory.Model;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,12 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask colidableLayer;
     public LayerMask interactableLayer;
+    public LayerMask itemLayer;
 
     [SerializeField] DialogueManager dialogueManager;
+
+    [SerializeField]
+    private InventorySO inventoryData;
 
     private void Start()
     {
@@ -85,12 +90,23 @@ public class PlayerController : MonoBehaviour
         var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         var interactPos = transform.position + facingDir;
 
-        Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
+        //Debug.DrawLine(transform.position, interactPos, Color.red, 1f);
 
-        var collider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
-        if (collider != null)
+        var interactableCollider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
+        var itemCollider = Physics2D.OverlapCircle(transform.position, 1f, itemLayer);
+
+        if (interactableCollider != null)
         {
-            collider.GetComponent<Interactable>()?.Interact(dialogManager);
+            interactableCollider.GetComponent<Interactable>()?.Interact(dialogManager);
+        }
+
+        else if (itemCollider != null)
+        {
+            Item item = itemCollider.GetComponent<Item>();
+            int remainder = inventoryData.AddItem(item.InventoryItem, item.Quantity);
+            if (remainder == 0) item.DestroyItem();
+            else
+                item.Quantity = remainder;
         }
     }
 

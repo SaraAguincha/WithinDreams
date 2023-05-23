@@ -1,4 +1,4 @@
-using Inventory.Model;
+/*using Inventory.Model;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,4 +19,4 @@ public class PickUpSystem : MonoBehaviour
                 item.Quantity = remainder;
         }
     }
-}
+}*/
