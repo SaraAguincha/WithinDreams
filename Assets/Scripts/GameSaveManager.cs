@@ -8,7 +8,7 @@ public class GameSaveManager : MonoBehaviour
 {
     public static GameSaveManager gameSave;
     public List<ScriptableObject> objects = new List<ScriptableObject>();
-
+    
     private void Awake()
     {
         if (gameSave == null)
@@ -18,21 +18,11 @@ public class GameSaveManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
+
         }
         DontDestroyOnLoad(this);
     }
-
-    private void OnEnable()
-    {
-        LoadObjects();
-        Debug.Log(Application.persistentDataPath);
-    }
-
-    private void OnDisable()
-    {
-        SaveObjects();
-    }
-
+    
 
     public void SaveObjects()
     {
@@ -60,6 +50,14 @@ public class GameSaveManager : MonoBehaviour
                 JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), objects[i]);
                 file.Close();
             }
+            else
+            {
+                FileStream file = File.Open(Application.persistentDataPath +
+                   string.Format("/initialValue{0}.dat", i), FileMode.Open);
+                BinaryFormatter binary = new BinaryFormatter();
+                JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), objects[i]);
+                file.Close();
+            }
         }
     }
 
@@ -72,7 +70,7 @@ public class GameSaveManager : MonoBehaviour
             {
                 File.Delete(Application.persistentDataPath +
                 string.Format("/{0}.dat", i));
-            }
+            } 
         }
     }
 
