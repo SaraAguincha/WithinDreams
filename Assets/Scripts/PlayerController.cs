@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private InventorySO inventoryData;
 
+    [SerializeField]
+    public Milestones milestones;
+
     private void Start()
     {
         transform.position = startingPosition.initialValue;
@@ -63,13 +66,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
             Interact(dialogueManager);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && milestones.getBoolMilestone("dreamWorldUnlocked"))
         {
             startingPosition.initialValue = new Vector2(transform.position.x, transform.position.y);
             
             string sceneName = SceneManager.GetActiveScene().name;
 
-            print(sceneName.Contains("Dream"));
             if (sceneName.Contains("Dream"))
             {
                 sceneName = sceneName.Remove(sceneName.Length - 6);

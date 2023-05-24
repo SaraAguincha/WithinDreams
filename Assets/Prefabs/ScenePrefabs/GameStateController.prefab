@@ -231,6 +231,7 @@ MonoBehaviour:
     m_Bits: 256
   dialogueManager: {fileID: 5714117587544379817}
   inventoryData: {fileID: 11400000, guid: a8a0a8952b93d5b469c11daa485d3635, type: 2}
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
 --- !u!61 &5714117588279068489
 BoxCollider2D:
   m_ObjectHideFlags: 0
