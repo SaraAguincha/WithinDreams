@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public VectorValue startingPosition;
     private Vector2 input;
-   
-
 
     private Animator animator;
 
@@ -21,7 +19,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer;
     public LayerMask itemLayer;
 
-    [SerializeField] DialogueManager dialogueManager;
+    [SerializeField] 
+    DialogueManager dialogueManager;
 
     [SerializeField]
     private InventorySO inventoryData;
