@@ -23,14 +23,20 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator ShowDialogue(List<Dialog> dialogues)
     {
-
         yield return new WaitForEndOfFrame();
+
+        if (dialogues.Count == 0 ) 
+        {
+            Debug.LogWarning("The object that you are trying to interact with does not have any dialog assigned to it.");
+            yield break; 
+        }
 
         OnShowDialog?.Invoke();
         this.dialogues = dialogues;
         dialogueBox.SetActive(true);
         StartCoroutine(TypeDialogue(dialogues[0].Lines[0]));
         ++currentLine;
+
         if (dialogues[0].Title != "")
         {
             dialogueTitleBox.SetActive(true);

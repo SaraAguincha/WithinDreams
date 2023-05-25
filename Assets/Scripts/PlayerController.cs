@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask colidableLayer;
     public LayerMask interactableLayer;
     public LayerMask itemLayer;
+    public LayerMask transitionLayer;
 
     [SerializeField] 
     DialogueManager dialogueManager;
@@ -36,6 +37,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        SceneTransition.blockPlayerTransition += TransitionDialogue;
+    }
+
+    private void OnDestroy()
+    {
+        SceneTransition.blockPlayerTransition -= TransitionDialogue;
     }
 
     public void HandleUpdate()
@@ -80,8 +87,15 @@ public class PlayerController : MonoBehaviour
             {
                 sceneName = sceneName + " Dream";
             }
-            SceneManager.LoadScene(sceneName);
+            if (SceneUtility.GetBuildIndexByScenePath(sceneName) > 0)
+                SceneManager.LoadScene(sceneName);
         }
+        
+    }
+
+    private void TransitionDialogue()
+    {
+        Interact(dialogueManager);
     }
 
     void Interact(DialogueManager dialogManager)
@@ -89,13 +103,20 @@ public class PlayerController : MonoBehaviour
         var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         var interactPos = transform.position + facingDir;
 
-
         var interactableCollider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
+        // TODO - There is a bug where if you spam "Z" while entering a transition block the text is redered 2 types
+        // Easy to solve but best way is being investigated
         var itemCollider = Physics2D.OverlapCircle(transform.position, 1f, itemLayer);
+        var transitionCollider = Physics2D.OverlapCircle(interactPos, 1f, transitionLayer);
 
         if (interactableCollider != null)
         {
             interactableCollider.GetComponent<Interactable>()?.Interact(dialogManager);
+        }
+
+        else if (transitionCollider != null)
+        {
+            transitionCollider.GetComponent<Interactable>()?.Interact(dialogManager);
         }
 
         else if (itemCollider != null)
@@ -106,6 +127,7 @@ public class PlayerController : MonoBehaviour
             else
                 item.Quantity = remainder;
         }
+
     }
 
 
