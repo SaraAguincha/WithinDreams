@@ -4725,7 +4725,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c925486c2624604fbb91062e86421a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues: []
+  dialogues:
+  - lines:
+    - It's a paper.
+    - 'It reads the following:'
+    - '"If you press Spacebar you can switch between Reality and Dreams"'
+    title: 
+    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
 --- !u!212 &1929948286
 SpriteRenderer:
