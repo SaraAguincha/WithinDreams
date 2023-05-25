@@ -9,14 +9,21 @@ public class SceneTransition : MonoBehaviour
     public Vector2 playerPosition;
     public VectorValue playerInfo;
     public SceneName sceneInfo;
+    
+    [SerializeField] Milestones milestones;
+    public string neededMilestone;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            playerInfo.initialValue = playerPosition;
-            SceneManager.LoadScene(sceneToLoad);
-            sceneInfo.setSceneName(sceneToLoad);
+           if (milestones.getBoolMilestone(neededMilestone) || neededMilestone == "")
+           {
+                playerInfo.initialValue = playerPosition;
+                SceneManager.LoadScene(sceneToLoad);
+                sceneInfo.setSceneName(sceneToLoad);
+            }
+            
         }
     }
 }
