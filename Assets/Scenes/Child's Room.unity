@@ -2437,7 +2437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430928812}
   - component: {fileID: 1430928811}
-  - component: {fileID: 1430928810}
+  - component: {fileID: 1430928815}
   - component: {fileID: 1430928814}
   - component: {fileID: 1430928813}
   m_Layer: 6
@@ -2447,41 +2447,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1430928810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430928809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc61d8ddcf9888540a01cfa0c21fdea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - lines:
-    - I am a Mirror.
-    - I mirror.
-    title: Mirror
-    imagePath: 
-  - lines:
-    - You truly do mirror.
-    title: You
-    imagePath: placeholder
-  - lines:
-    - Yes, this is what I was made for.
-    title: Mirror
-    imagePath: 
-  - lines:
-    - Do you ever get tired of being a mirror?
-    - Do you ever wish you were something else?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - No and no.
-    title: Mirror
-    imagePath: 
 --- !u!212 &1430928811
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2596,6 +2561,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.0054264}
   m_EdgeRadius: 0
+--- !u!114 &1430928815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430928809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - lines:
+    - It's a mirror.
+    title: 
+    imagePath: 
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  unlockedMilestone: 
 --- !u!1 &1494145108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,8 +4544,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929948287}
+  - component: {fileID: 1929948288}
   - component: {fileID: 1929948286}
-  - component: {fileID: 1929948285}
   - component: {fileID: 1929948284}
   - component: {fileID: 1929948283}
   m_Layer: 6
@@ -4618,26 +4602,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.76867807, y: 1.1413178}
   m_EdgeRadius: 0
---- !u!114 &1929948285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929948282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c925486c2624604fbb91062e86421a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - lines:
-    - It's a paper.
-    - 'It reads the following:'
-    - '"If you press Spacebar you can switch between Reality and Dreams"'
-    title: 
-    imagePath: 
-  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
 --- !u!212 &1929948286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4705,6 +4669,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1929948288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929948282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - lines:
+    - It's a paper.
+    - 'It reads the following:'
+    - '"You can interact with things by pressing Z"'
+    - '"If you press Spacebar you can switch between Reality and Dreams"'
+    title: 
+    imagePath: 
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  unlockedMilestone: dreamWorldUnlocked
 --- !u!1 &2106214246
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,7 +6563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652501233939544806, guid: 70d61560bc28511408b07c7b0ebac159, type: 3}
       propertyPath: neededMilestone
-      value: roomEntrance
+      value: roomUnlocked
       objectReference: {fileID: 0}
     - target: {fileID: 4652501233939544806, guid: 70d61560bc28511408b07c7b0ebac159, type: 3}
       propertyPath: playerPosition.x

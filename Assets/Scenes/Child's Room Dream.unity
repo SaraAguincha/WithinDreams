@@ -290,35 +290,16 @@ GameObject:
   m_Component:
   - component: {fileID: 612746698}
   - component: {fileID: 612746697}
+  - component: {fileID: 612746699}
   - component: {fileID: 612746696}
   - component: {fileID: 612746695}
-  - component: {fileID: 612746694}
   m_Layer: 6
-  m_Name: Cow_2
+  m_Name: Moowie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &612746694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612746693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5991dd172e798c44b32b1f79b57cb93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - lines:
-    - Faz me esta quest :D
-    title: cow(name)
-    imagePath: 
-  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
-  unlockedMilestone: milestoneTest
 --- !u!50 &612746695
 Rigidbody2D:
   serializedVersion: 4
@@ -433,6 +414,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612746699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612746693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - lines:
+    - Hello! Long time no see!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Never thought you could talk Moowie!
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Moo.
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Oh.
+    title: You
+    imagePath: placeholder
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  unlockedMilestone: 
 --- !u!1 &641507659
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,7 +4588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874995112}
   - component: {fileID: 1874995111}
-  - component: {fileID: 1874995110}
+  - component: {fileID: 1874995113}
   - component: {fileID: 1874995109}
   - component: {fileID: 1874995108}
   m_Layer: 6
@@ -4633,41 +4645,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.0054264}
   m_EdgeRadius: 0
---- !u!114 &1874995110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874995107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc61d8ddcf9888540a01cfa0c21fdea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogues:
-  - lines:
-    - I am a Mirror.
-    - I mirror.
-    title: Mirror
-    imagePath: 
-  - lines:
-    - You truly do mirror.
-    title: You
-    imagePath: placeholder
-  - lines:
-    - Yes, this is what I was made for.
-    title: Mirror
-    imagePath: 
-  - lines:
-    - Do you ever get tired of being a mirror?
-    - Do you ever wish you were something else?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - No and no.
-    title: Mirror
-    imagePath: 
 --- !u!212 &1874995111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4735,6 +4712,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874995113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874995107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - lines:
+    - I am a Mirror.
+    - I mirror.
+    title: Mirror
+    imagePath: 
+  - lines:
+    - You truly do mirror.
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Yes, this is what I was made for.
+    title: Mirror
+    imagePath: 
+  - lines:
+    - Do you ever get tired of being a mirror?
+    - Do you ever wish you were something else?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - No and no.
+    title: Mirror
+    imagePath: 
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  unlockedMilestone: 
 --- !u!1 &1880861792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,11 +4759,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1880861797}
   - component: {fileID: 1880861796}
+  - component: {fileID: 1880861798}
   - component: {fileID: 1880861795}
   - component: {fileID: 1880861794}
-  - component: {fileID: 1880861798}
   m_Layer: 6
-  m_Name: MomPlaceholder
+  m_Name: Mom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4878,23 +4892,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880861792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5991dd172e798c44b32b1f79b57cb93, type: 3}
+  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
   - lines:
-    - Mom, what are you doing here?
-    - I haven't seen you in a while :C
-    - David Matos
+    - Mom?
     title: You
+    imagePath: placeholder
+  - lines:
+    - Hello, sweetie.
+    title: Mom
     imagePath: 
   - lines:
-    - Dei ghost filha
-    - "Explica\xE7ao de como funciona o mundo dos sonhos"
+    - Why are you here?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Anything that you imagine can be here!
+    - We're not in the Real World, this is your Dream World.
+    title: Mom
+    imagePath: 
+  - lines:
+    - This sounds fun! All my plushies are here!
+    title: You
+    imagePath: placeholder
+  - lines:
+    - You can talk with them! They might ask you a few requests and give you something
+      back for them.
+    title: Mom
+    imagePath: 
+  - lines:
+    - Woooooow.
+    title: You
+    imagePath: placeholder
+  - lines:
+    - But for now go get some breakfast, it's already 10 AM.
     title: Mom
     imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
-  unlockedMilestone: 
+  unlockedMilestone: roomUnlocked
 --- !u!1 &2106214246
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour, Interactable
+public class RegularInteractable : MonoBehaviour, Interactable
 {
     [SerializeField] List<Dialog> dialogues;
     [SerializeField] Milestones milestones;
