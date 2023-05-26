@@ -3,37 +3,55 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog }
+public enum GameState { FreeRoam, Dialog, Pause }
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
+    [SerializeField] DialogueManager dialogueManager;
+    [SerializeField] PauseManager pauseManager;
 
     GameState state;
 
     private void Start()
     {
-        playerController.GetDialogManager().OnShowDialog += () =>
+        DialogueManager.OnShowDialog += () =>
         {
             state = GameState.Dialog;
         };
 
-        playerController.GetDialogManager().OnCloseDialog += () =>
+        DialogueManager.OnCloseDialog += () =>
         {
             if (state == GameState.Dialog)
                 state = GameState.FreeRoam;
+        };
+
+        PlayerController.requestPause += () =>
+        {
+            state = GameState.Pause;
+        };
+
+        PauseManager.requestUnpause += () =>
+        {
+            state = GameState.FreeRoam;
         };
     }
 
     private void Update()
     {
-        if (state == GameState.FreeRoam)
+        switch (state)
         {
-            playerController.HandleUpdate();
+            case GameState.FreeRoam:
+                playerController.HandleUpdate();
+                break;
+            case GameState.Dialog:
+                dialogueManager.HandleUpdate();
+                break;
+            case GameState.Pause:
+                pauseManager.HandleUpdate();
+                break;
+            default: 
+                state = GameState.FreeRoam;
+                break;
         }
-        if (state == GameState.Dialog)
-        {
-            playerController.GetDialogManager().HandleUpdate(playerController.GetDialogManager().GetOnCloseDialog());
-        }
-
     }
 }

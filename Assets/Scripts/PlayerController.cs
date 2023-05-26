@@ -1,7 +1,6 @@
 using Inventory.Model;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +28,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Milestones milestones;
 
+    public static event Action requestPause;
+
     private void Start()
     {
         transform.position = startingPosition.initialValue;
@@ -47,6 +48,12 @@ public class PlayerController : MonoBehaviour
 
     public void HandleUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            requestPause?.Invoke();
+            return;
+        }
+
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");

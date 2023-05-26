@@ -18,7 +18,6 @@ public class GameSaveManager : MonoBehaviour
         else
         {
             Destroy(this.gameObject);
-
         }
         DontDestroyOnLoad(this);
     }
@@ -50,15 +49,8 @@ public class GameSaveManager : MonoBehaviour
                 JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), objects[i]);
                 file.Close();
             }
-            /*else
-            {
-                FileStream file = File.Open(Application.persistentDataPath +
-                   string.Format("/initialValue{0}.dat", i), FileMode.Open);
-                BinaryFormatter binary = new BinaryFormatter();
-                JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file), objects[i]);
-                file.Close();
-            }*/
         }
+        print("Hello 2!");
     }
 
     public void ResetObjects()
@@ -72,6 +64,7 @@ public class GameSaveManager : MonoBehaviour
                 string.Format("/{0}.dat", i));
             } 
         }
+        
         Application.Quit();
     }
 

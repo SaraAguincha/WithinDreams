@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: roomEntrance
     - Name: $v
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 

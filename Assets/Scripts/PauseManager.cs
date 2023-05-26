@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,39 +9,42 @@ public class PauseManager : MonoBehaviour
     private bool isPaused;
     public GameObject pausePanel;
 
+    public static event Action requestUnpause;
+
     // Start is called before the first frame update
     void Start()
     {
         isPaused = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HandleUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (!isPaused) 
         {
-            updatePause();
+            Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            Unpause();
         }
     }
 
-    public void updatePause()
+    public void Pause()
     {
-        isPaused = !isPaused;
-        if (isPaused)
-        {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            pausePanel.SetActive(false);
-            Time.timeScale = 1f;
-        }
+        pausePanel.SetActive(true);
+        isPaused = true;
+    }
+
+    public void Unpause()
+    {
+        requestUnpause?.Invoke();
+        pausePanel.SetActive(false);
+        isPaused = false;
     }
 
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
     }
 }

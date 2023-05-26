@@ -13,8 +13,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Text dialogueTitleText;
     [SerializeField] int lettersPerSecond;
 
-    public event Action OnShowDialog;
-    public event Action OnCloseDialog;
+    public static event Action OnShowDialog;
+    public static event Action OnCloseDialog;
 
     List<Dialog> dialogues;
     int currentLine = 0;
@@ -50,12 +50,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public Action GetOnCloseDialog()
-    {
-        return OnCloseDialog;
-    }
-
-    public void HandleUpdate(Action onCloseDialog)
+    public void HandleUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Z) && !isTypingDialogue && !isTypingTitle)
         {
@@ -90,7 +85,7 @@ public class DialogueManager : MonoBehaviour
                 dialogueBox.SetActive(false);
                 dialogueTitleBox.SetActive(false);
                 dialogueImage.SetActive(false);
-                onCloseDialog?.Invoke();
+                OnCloseDialog?.Invoke();
             }
         }
     }
