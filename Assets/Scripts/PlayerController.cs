@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
             transitionCollider.GetComponent<Interactable>()?.Interact(dialogManager);
         }
 
-        else if (itemCollider != null)
+         if (itemCollider != null)
         {
             Item item = itemCollider.GetComponent<Item>();
             int remainder = inventoryData.AddItem(item.InventoryItem, item.Quantity);

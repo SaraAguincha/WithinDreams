@@ -290,9 +290,9 @@ GameObject:
   m_Component:
   - component: {fileID: 612746698}
   - component: {fileID: 612746697}
-  - component: {fileID: 612746699}
   - component: {fileID: 612746696}
   - component: {fileID: 612746695}
+  - component: {fileID: 612746699}
   m_Layer: 6
   m_Name: Moowie
   m_TagString: Untagged
@@ -423,28 +423,102 @@ MonoBehaviour:
   m_GameObject: {fileID: 612746693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Script: {fileID: 11500000, guid: c0304a6897ccf14459ad8c6580ed8a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
+  preInteraction:
   - lines:
-    - Hello! Long time no see!
+    - Moo.
     title: Moowie
     imagePath: 
-  - lines:
-    - Never thought you could talk Moowie!
-    title: You
-    imagePath: placeholder
+  startQuest:
   - lines:
     - Moo.
     title: Moowie
     imagePath: 
   - lines:
-    - Oh.
+    - Didn't know you could talk Moowie.
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Yes, I can talk.
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Why didn't you ever talk back to me?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - You never asked me to.
+    - Anyway, I have a favor to ask you.
+    title: Moowie
+    imagePath: 
+  - lines:
+    - What is it?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - You used to read a book about a cow named Moowie aloud.
+    - I would really love if you read that book back to me once more!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Alright, I'll just have to find it...
+    title: You
+    imagePath: placeholder
+  duringQuest:
+  - lines:
+    - You used to read a book about a cow named Moowie aloud.
+    - I would really love if you read that book back to me once more!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Alright, I'll just have to find it...
+    title: You
+    imagePath: placeholder
+  allSet:
+  - lines:
+    - So, did you find the book?
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Yes, I found it!
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Yay!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - '*starts reading a book passage*'
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Words can't describe how happy I am!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - I'm happy for you moowie!
+    - -- I'm hungry, perhaps I should go eat breakfast. --
+    title: You
+    imagePath: placeholder
+  completedQuest:
+  - lines:
+    - Words can't describe how happy I am!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - I'm happy for you moowie!
+    - -- I'm hungry, perhaps I should go eat breakfast. --
     title: You
     imagePath: placeholder
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
-  unlockedMilestone: 
+  moowieBookInstance: {fileID: 11400000, guid: 015513ee889c5dd4992543b7197cde0d, type: 2}
+  interactionMilestone: moowieStartInteraction
+  startQuestMilestone: moowieStartQuest
+  allSetMilestone: moowieAllSet
+  completedQuestMilestone: moowieCompletedQuest
+  unlockedMilestone: roomEntrance
 --- !u!1 &641507659
 GameObject:
   m_ObjectHideFlags: 0
@@ -4927,11 +5001,11 @@ MonoBehaviour:
     title: You
     imagePath: placeholder
   - lines:
-    - But for now go get some breakfast, it's already 10 AM.
+    - I think Moowie has a request for you. Talk to him.
     title: Mom
     imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
-  unlockedMilestone: roomUnlocked
+  unlockedMilestone: moowieStartInteraction
 --- !u!1 &2106214246
 GameObject:
   m_ObjectHideFlags: 0

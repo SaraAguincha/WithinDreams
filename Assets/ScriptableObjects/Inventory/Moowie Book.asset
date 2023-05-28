@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfccd492040eeb4abd160e3f2f9024c, type: 3}
+  m_Name: Moowie Book
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Book
+  <Description>k__BackingField: It's the book Moowie requested you.
+  <ItemImage>k__BackingField: {fileID: -1886589838, guid: 940fb86f82c02e84a9373362944ce5e0, type: 3}
