@@ -3584,7 +3584,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.0266562
+  MinDistance: 2.0786705
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -3845,10 +3845,10 @@ MonoBehaviour:
     imagePath: 
   - lines:
     - Yiipi!
-    - Bacon and eggs, bacon and eggs ~
+    - Bacon and eggs, bacon and eggs...
     - Best breakfast ever! Thank you so much Dad!!
     title: You
-    imagePath: 
+    imagePath: placeholder
   afterQuest:
   - lines:
     - Have you finished eating?
