@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Parent's Room.unity
     guid: 99b59ec1f7e51dd44a51ebe52cc4f367
+  - enabled: 1
+    path: Assets/Scenes/Playground.unity
+    guid: 756165898ee80d743ada5e7104f04d0e
   m_configObjects: {}
