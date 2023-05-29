@@ -9,20 +9,44 @@ public class Moowie : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> duringQuest;
     [SerializeField] List<Dialog> allSet;
     [SerializeField] List<Dialog> completedQuest;
+    [SerializeField] List<Dialog> startHomeworkQuest;
+    [SerializeField] List<Dialog> homeworkAllSet;
+    [SerializeField] List<Dialog> completedHomeworkQuest;
 
     [SerializeField] Milestones milestones;
 
     [SerializeField] BooleanValue moowieBookInstance;
+    [SerializeField] BooleanValue moowieFriendInstance;
 
     public string interactionMilestone;
     public string startQuestMilestone;
     public string allSetMilestone;
     public string completedQuestMilestone;
-    public string unlockedMilestone;
+    public string unlockedInitialMilestone;
+    public string startHomeworkQuestMilestone;
+    public string duringHomeworkMilestone;
+    public string homeworkAllSetMilestone;
+    public string completedHomeworkQuestMilestone;
+
     public void Interact(DialogueManager dialogueManager)
     {
-        // I wish this could be a switch, but it can't be :(
-        if (milestones.getBoolMilestone(completedQuestMilestone))
+        if (milestones.getBoolMilestone(completedHomeworkQuestMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(completedHomeworkQuest));
+        }
+        else if (milestones.getBoolMilestone(homeworkAllSetMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(homeworkAllSet));
+            milestones.addMilestone(completedHomeworkQuestMilestone, true);
+        }
+        else if (milestones.getBoolMilestone(startHomeworkQuestMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(startHomeworkQuest));
+            if (!milestones.getBoolMilestone(duringHomeworkMilestone))
+                milestones.addMilestone(duringHomeworkMilestone, true);
+            moowieFriendInstance.setTrue();
+        }
+        else if (milestones.getBoolMilestone(completedQuestMilestone))
         {
             StartCoroutine(dialogueManager.ShowDialogue(completedQuest));
         }
@@ -30,8 +54,8 @@ public class Moowie : MonoBehaviour, Interactable
         {
             StartCoroutine(dialogueManager.ShowDialogue(allSet));
             milestones.addMilestone(completedQuestMilestone, true);
-            if (unlockedMilestone != "")
-                milestones.addMilestone(unlockedMilestone, true);
+            if (unlockedInitialMilestone != "")
+                milestones.addMilestone(unlockedInitialMilestone, true);
         }
         else if (milestones.getBoolMilestone(startQuestMilestone))
         {

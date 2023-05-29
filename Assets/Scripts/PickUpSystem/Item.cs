@@ -31,6 +31,15 @@ public class Item : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
 
+    public void Update()
+    {
+        if (itemInstance.getValue())
+        {
+            this.gameObject.SetActive(true);
+            return;
+        }
+    }
+
     public void DestroyItem()
     {
         GetComponent<Collider2D>().enabled = false;

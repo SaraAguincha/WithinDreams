@@ -334,7 +334,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.30113167}
+  m_Offset: {x: -0.021533966, y: -0.31091958}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -345,7 +345,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.3977367}
+  m_Size: {x: 2.043068, y: 1.3781608}
   m_EdgeRadius: 0
 --- !u!212 &612746697
 SpriteRenderer:
@@ -385,9 +385,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 424921873
+  m_SortingLayer: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: -597356408, guid: 903598afaaec71c4b8fb4ceb7649fdf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
     title: Moowie
     imagePath: 
   - lines:
-    - I'm happy for you moowie!
+    - I'm happy for you Moowie!
     - -- I'm hungry, perhaps I should go eat breakfast. --
     title: You
     imagePath: placeholder
@@ -508,17 +508,87 @@ MonoBehaviour:
     title: Moowie
     imagePath: 
   - lines:
-    - I'm happy for you moowie!
+    - I'm happy for you Moowie!
     - -- I'm hungry, perhaps I should go eat breakfast. --
+    title: You
+    imagePath: placeholder
+  startHomeworkQuest:
+  - lines:
+    - Hi Moowie! Where is my mom?
+    - She disappeared...
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Oh, I know where she went! I'm glad you asked!
+    - But I need you to do something for me first.
+    title: Moowie
+    imagePath: 
+  - lines:
+    - No problem Moowie, what is it?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - You see, I haven't seen my friend Meowie in months and I'm starting to become
+      worried aboout him.
+    - I have a feeling he was taken to the farthest place from this room in the house.
+    - Can you please find him for me and bring him here so I can check on him?
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Of course, Moowie!
+    - Anything for a good friend!
+    title: You
+    imagePath: placeholder
+  homeworkAllSet:
+  - lines:
+    - Great news Moowie! I found your friend.
+    - He was in a cabinet in the living room.
+    - I brought him here so you guys could talk.
+    - Here you go.
+    title: You
+    imagePath: placeholder
+  - lines:
+    - 'WOW! Thank you so much! '
+    - I never thought i would see my friend again!
+    - How have you been, Meowie?
+    title: Moowie
+    imagePath: 
+  - lines:
+    - I'm doing great Moowie! No need to worry about me.
+    - And what about you?
+    title: Meowie
+    imagePath: 
+  - lines:
+    - I'm great too, thanks for asking.
+    - I just wanted to check up on you and see if you were alright.
+    - I can see you're doing very well.
+    - Until next time, my friend!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Thank you for caring.
+    - Bye bye, Moowie!
+    title: Meowie
+    imagePath: 
+  completedHomeworkQuest:
+  - lines:
+    - I'm happy to see you're doing better now, Moowie!
+    - Ok so, where is my mom, Moowie?
+    - I'm starting to get worried.
     title: You
     imagePath: placeholder
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieBookInstance: {fileID: 11400000, guid: 015513ee889c5dd4992543b7197cde0d, type: 2}
+  moowieFriendInstance: {fileID: 11400000, guid: 9ebc623b498252148a7a2fa9d12a2ab6, type: 2}
   interactionMilestone: moowieStartInteraction
   startQuestMilestone: moowieStartQuest
   allSetMilestone: moowieAllSet
   completedQuestMilestone: moowieCompletedQuest
-  unlockedMilestone: roomEntrance
+  unlockedInitialMilestone: roomEntrance
+  startHomeworkQuestMilestone: deskHomeworkQuest
+  duringHomeworkMilestone: deskHomeworkDuring
+  homeworkAllSetMilestone: deskHomeworkAllSet
+  completedHomeworkQuestMilestone: deskHomeworkCompleted
 --- !u!1 &641507659
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,31 +3628,11 @@ Tilemap:
   m_GameObject: {fileID: 1815754582}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: -2, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 25
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -1, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 24
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -4, y: -6, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 23
+      m_TileSpriteIndex: 25
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3601,8 +3651,8 @@ Tilemap:
   - first: {x: -2, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 22
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3611,8 +3661,8 @@ Tilemap:
   - first: {x: -1, y: -6, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 21
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3722,7 +3772,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 20
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4232,7 +4282,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 25
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 23
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4372,7 +4422,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 24
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 22
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4380,23 +4430,23 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 59bd943c6d95d2a46b810dd92b6480ee, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 84b3d3770e528804286676f8a0443605, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: af79d83816f63e945a3f8fb0b7a8cdd8, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 7cafd83ac58e25a4b9a6af5234689418, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 207e42fe8f3c87c4988e91365c8b8bba, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 1143a943956238a47bc1d5c76232504c, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 40e4a5b3edf4a6a45ac7640997397aad, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: eb6604fbcd779ea4e80f4357f1f33ab9, type: 2}
-  - m_RefCount: 11
+  - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 714436196b80de049ba82ee261dc5ac8, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 74cad0ca6703e2d45a94016db1d1bdf5, type: 2}
@@ -4449,7 +4499,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 13
     m_Data: {fileID: -1545668107, guid: 7ccf48aaf6d1dfc4d97da2c23960850b, type: 3}
-  - m_RefCount: 11
+  - m_RefCount: 13
     m_Data: {fileID: 1619442237, guid: 7ccf48aaf6d1dfc4d97da2c23960850b, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -4469,6 +4519,14 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 13
     m_Data: {fileID: 151772838, guid: 7ccf48aaf6d1dfc4d97da2c23960850b, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1311173673, guid: 7ccf48aaf6d1dfc4d97da2c23960850b, type: 3}
   - m_RefCount: 1
@@ -4476,17 +4534,9 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1839166027, guid: 7ccf48aaf6d1dfc4d97da2c23960850b, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1700936264, guid: f179950233640994792d055936a8065e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1951142542, guid: f179950233640994792d055936a8065e, type: 3}
-  - m_RefCount: 1
     m_Data: {fileID: -989293180, guid: 7ccf48aaf6d1dfc4d97da2c23960850b, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 483698696, guid: f179950233640994792d055936a8065e, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1625709302, guid: f179950233640994792d055936a8065e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 82
+  - m_RefCount: 80
     m_Data:
       e00: 1
       e01: 0
@@ -4523,7 +4573,7 @@ Tilemap:
       e32: 7.58e-43
       e33: 7.61e-43
   m_TileColorArray:
-  - m_RefCount: 82
+  - m_RefCount: 80
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4569,11 +4619,7 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1815754588}
     m_ColliderPaths:
-    - - X: 0
-        Y: -54375000
-      - X: 104375000
-        Y: -54375000
-      - X: 105000000
+    - - X: 105000000
         Y: -53750000
       - X: 105000000
         Y: 80000000
@@ -4583,12 +4629,8 @@ CompositeCollider2D:
         Y: -53750000
       - X: -34375000
         Y: -54375000
-      - X: -20000000
+      - X: 104375000
         Y: -54375000
-      - X: -20000000
-        Y: -70000000
-      - X: 0
-        Y: -70000000
     - - X: -30000000
         Y: -50000000
       - X: -30000000
@@ -4599,16 +4641,12 @@ CompositeCollider2D:
         Y: -50000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.000029300001, y: -7}
-      - {x: 0.0000294, y: -5.4375}
-      - {x: 10.437508, y: -5.4374924}
+    - - {x: 10.4374895, y: -5.4375}
       - {x: 10.5, y: -5.374989}
       - {x: 10.49997, y: 8}
       - {x: -3.5, y: 7.9999704}
       - {x: -3.4999924, y: -5.3750076}
       - {x: -3.4374893, y: -5.4375}
-      - {x: -2, y: -5.4375296}
-      - {x: -1.9999708, y: -7}
     - - {x: 10, y: -4.9999704}
       - {x: -3, y: -4.9999704}
       - {x: -2.9999707, y: 5}
@@ -4833,9 +4871,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1880861797}
   - component: {fileID: 1880861796}
-  - component: {fileID: 1880861798}
   - component: {fileID: 1880861795}
   - component: {fileID: 1880861794}
+  - component: {fileID: 1880861798}
   m_Layer: 6
   m_Name: Mom
   m_TagString: Untagged
@@ -4966,7 +5004,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1880861792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fb7404253b721f46878e3bd5a195f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
@@ -4983,8 +5021,8 @@ MonoBehaviour:
     title: You
     imagePath: placeholder
   - lines:
-    - Anything that you imagine can be here!
     - We're not in the Real World, this is your Dream World.
+    - Anything that you imagine can be here!
     title: Mom
     imagePath: 
   - lines:
@@ -5005,6 +5043,8 @@ MonoBehaviour:
     title: Mom
     imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  momInstance: {fileID: 1880861792}
+  homeworkQuestMilestone: deskHomeworkQuest
   unlockedMilestone: moowieStartInteraction
 --- !u!1 &2106214246
 GameObject:
