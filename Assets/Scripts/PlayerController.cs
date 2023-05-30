@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer;
     public LayerMask itemLayer;
     public LayerMask transitionLayer;
+    public GameObject dreamWorldPanel;
 
     [SerializeField] 
     DialogueManager dialogueManager;
@@ -94,10 +95,30 @@ public class PlayerController : MonoBehaviour
             {
                 sceneName = sceneName + " Dream";
             }
+
             if (SceneUtility.GetBuildIndexByScenePath(sceneName) > 0)
-                SceneManager.LoadScene(sceneName);
+                //SceneManager.LoadScene(sceneName);
+                print("Hello");
+                StartCoroutine(DreamWorldCoroutine(sceneName));
         }
         
+    }
+
+    public IEnumerator DreamWorldCoroutine(string sceneName)
+    {
+        print("Finally here");
+        if (dreamWorldPanel != null)
+        {
+            GameObject panel = Instantiate(dreamWorldPanel, Vector3.zero, Quaternion.identity);
+            DontDestroyOnLoad(panel);
+            Destroy(panel, 5);
+        }
+        yield return new WaitForSeconds(1.5f);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+        while(!asyncOperation.isDone)
+        {
+            yield return null;
+        }
     }
 
     private void TransitionDialogue()
