@@ -3578,6 +3578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7940867845308131188, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7940867845308131189, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3661,6 +3665,10 @@ PrefabInstance:
     - target: {fileID: 7940867845308131189, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940867845981840812, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
@@ -4143,18 +4151,22 @@ MonoBehaviour:
     - I should check the fridge.
     title: You
     imagePath: placeholder
-  completedQuest:
+  completedQuestBefore:
   - lines:
     - Thank you honey!
-    - Let's eat breakfast, it's your favourite.
+    - Let's eat breakfast, it's your favorite.
     title: Dad
     imagePath: 
+  completedQuestAfter:
   - lines:
-    - Yiipi!
-    - Bacon and eggs, bacon and eggs...
-    - Best breakfast ever! Thank you so much Dad!!
+    - Thank you so much Dad!
     title: You
     imagePath: placeholder
+  eating:
+  - lines:
+    - Nom Nom Nom.
+    title: 
+    imagePath: 
   afterQuest:
   - lines:
     - Have you finished eating?
@@ -4180,6 +4192,8 @@ MonoBehaviour:
   startQuestMilestone: dadEggQuest
   completedQuestMilestone: dadEggCompletedQuest
   afterQuestMilestone: dadEggAfterQuest
+  fadeInPanel: {fileID: 3496995683453612401, guid: 1498980c03560e249aba8a029fbe7d8c, type: 3}
+  fadeOutPanel: {fileID: 5491482619005305553, guid: a2d17a90447d9b24b84bd9ab3664be9f, type: 3}
 --- !u!61 &1469115160
 BoxCollider2D:
   m_ObjectHideFlags: 0

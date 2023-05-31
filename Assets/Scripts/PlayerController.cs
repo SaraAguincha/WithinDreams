@@ -98,7 +98,6 @@ public class PlayerController : MonoBehaviour
 
             if (SceneUtility.GetBuildIndexByScenePath(sceneName) > 0)
                 //SceneManager.LoadScene(sceneName);
-                print("Hello");
                 StartCoroutine(DreamWorldCoroutine(sceneName));
         }
         
@@ -106,7 +105,6 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator DreamWorldCoroutine(string sceneName)
     {
-        print("Finally here");
         if (dreamWorldPanel != null)
         {
             GameObject panel = Instantiate(dreamWorldPanel, Vector3.zero, Quaternion.identity);
