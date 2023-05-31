@@ -10,7 +10,7 @@ public class CutsceneManager : MonoBehaviour
 
     public void HandleUpdate()
     {
-        
+
     }
 
     public GameObject StartCutscene(GameObject panel)

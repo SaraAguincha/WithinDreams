@@ -50,7 +50,6 @@ public class GameSaveManager : MonoBehaviour
                 file.Close();
             }
         }
-        print("Hello 2!");
     }
 
     public void ResetObjects()
