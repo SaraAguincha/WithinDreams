@@ -514,73 +514,81 @@ MonoBehaviour:
     imagePath: placeholder
   startHomeworkQuest:
   - lines:
-    - Hi Moowie! Where is my mom?
+    - Hi Moowie! Do you know where's Mom?
     - She disappeared...
     title: You
     imagePath: placeholder
   - lines:
-    - Oh, I know where she went! I'm glad you asked!
+    - Oh, I know where she went!
     - But I need you to do something for me first.
     title: Moowie
     imagePath: 
   - lines:
-    - No problem Moowie, what is it?
+    - What is it?
     title: You
     imagePath: placeholder
   - lines:
-    - You see, I haven't seen my friend Meowie in months and I'm starting to become
-      worried aboout him.
-    - I have a feeling he was taken somewhere far from this room in the house.
-    - Can you please find him for me and bring him here so I can check on him?
+    - Do you still remeber Flopsy?
+    - He used to be beside me in your room, but I haven't seen him in a long while...
     title: Moowie
     imagePath: 
   - lines:
-    - Of course, Moowie!
-    - Anything for a good friend!
+    - Of course I remeber him!
+    - He was one of my favorites but Dad can't recall where he stored him...
     title: You
     imagePath: placeholder
+  - lines:
+    - Do you think you're able to find him?
+    - If I had to guess, I would say that he is in this house.
+    - But somewhere far from your room.
+    title: Moowie
+    imagePath: 
+  - lines:
+    - I will try my best to find him!
+    - -- I really want to see Mom --
+    title: You
+    imagePath: placeholder
+  - lines: []
+    title: 
+    imagePath: 
   homeworkAllSet:
   - lines:
-    - Great news Moowie! I found your friend.
-    - He was in a cabinet in the living room.
-    - I brought him here so you guys could talk.
-    - Here you go.
+    - Moowie! I found Flopsy!
     title: You
     imagePath: placeholder
   - lines:
-    - 'WOW! Thank you so much! '
-    - I never thought i would see my friend again!
-    - How have you been, Meowie?
+    - Long time no see!
     title: Moowie
     imagePath: 
   - lines:
-    - I'm doing great Moowie! No need to worry about me.
-    - And what about you?
-    title: Meowie
+    - Hi! I missed you both guys...
+    - Life gets kind of boring when you're in the middle of old books and paperwork.
+    - Even though we're plushies we still do have feelings.
+    title: Flopsy
     imagePath: 
   - lines:
-    - I'm great too, thanks for asking.
-    - I just wanted to check up on you and see if you were alright.
-    - I can see you're doing very well.
-    - Until next time, my friend!
-    title: Moowie
-    imagePath: 
-  - lines:
-    - Thank you for caring.
-    - See you around, Moowie!
-    title: Meowie
-    imagePath: 
-  completedHomeworkQuest:
-  - lines:
-    - I'm happy to see you're doing better now, Moowie!
-    - Ok so, where is my mom, Moowie?
-    - I'm starting to get worried.
+    - I'm so sorry Flopsy, I also missed you.
+    - Dad stored you a long time ago and he forgot where he put you.
+    - Anyways, Mom is still missing...
+    - Where is she?
     title: You
     imagePath: placeholder
+  - lines:
+    - I know where she is, follow me.
+    title: Moowie
+    imagePath: 
+  cutsceneDialogue:
+  - lines:
+    - Flopsy and Moowie got close to the mirror.
+    - They seem to have vanished.
+    title: 
+    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieBookInstance: {fileID: 11400000, guid: 015513ee889c5dd4992543b7197cde0d, type: 2}
-  moowieFriendInstance: {fileID: 11400000, guid: 9ebc623b498252148a7a2fa9d12a2ab6, type: 2}
-  meowieInstance: {fileID: 1821050046}
+  flopsyInstance: {fileID: 11400000, guid: 9ebc623b498252148a7a2fa9d12a2ab6, type: 2}
+  flopsy: {fileID: 1821050046}
+  fadeInPanel: {fileID: 3496995683453612401, guid: 1498980c03560e249aba8a029fbe7d8c, type: 3}
+  fadeOutPanel: {fileID: 5491482619005305553, guid: a2d17a90447d9b24b84bd9ab3664be9f, type: 3}
   interactionMilestone: moowieStartInteraction
   startQuestMilestone: moowieStartQuest
   allSetMilestone: moowieAllSet
@@ -4788,7 +4796,7 @@ GameObject:
   - component: {fileID: 1821050048}
   - component: {fileID: 1821050047}
   m_Layer: 6
-  m_Name: Meowie
+  m_Name: Flopsy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4832,7 +4840,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.15}
+    oldSize: {x: 0.14, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4882,7 +4890,7 @@ SpriteRenderer:
   m_SortingLayerID: 424921873
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 9ea72647c24be493ba6f15a9cd2a24ae, type: 3}
+  m_Sprite: {fileID: 1285879398, guid: 74197ad13d3562c4da7e5e52142280ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4918,9 +4926,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1874995112}
   - component: {fileID: 1874995111}
-  - component: {fileID: 1874995113}
   - component: {fileID: 1874995109}
   - component: {fileID: 1874995108}
+  - component: {fileID: 1874995113}
   m_Layer: 6
   m_Name: Mirror
   m_TagString: Untagged
@@ -5051,10 +5059,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1874995107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Script: {fileID: 11500000, guid: 00243ef350d8634499eb84f4e5067855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
+  defaultDialogue:
   - lines:
     - I am a Mirror.
     - I mirror.
@@ -5077,8 +5085,36 @@ MonoBehaviour:
     - No and no.
     title: Mirror
     imagePath: 
+  moowieVanishedDialogue:
+  - lines:
+    - Mirror?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Yes?
+    title: Mirror
+    imagePath: 
+  - lines:
+    - Did Flopsy and Moowie go through you?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Perhaps...
+    title: Mirror
+    imagePath: 
+  - lines:
+    - -- Perhaps I might try to enter the Mirror... --
+    title: You
+    imagePath: placeholder
+  demoEndDialogue:
+  - lines:
+    - Thanks for playing!
+    - Feel free to give us any feedback about the game!
+    title: Developers
+    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
-  unlockedMilestone: 
+  moowieVanished: deskHomeworkCompleted
+  enterMirrorAllowed: enterMirrorAllowed
 --- !u!1 &1880861792
 GameObject:
   m_ObjectHideFlags: 0

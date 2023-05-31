@@ -7744,6 +7744,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397443, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: objects.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5519148406339397444, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
       propertyPath: m_Name
       value: GameSaveManager
