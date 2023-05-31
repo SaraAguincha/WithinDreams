@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] CutsceneManager cutsceneManager;
     [SerializeField] GameObject dialogueBox;
     [SerializeField] GameObject dialogueTitleBox;
     [SerializeField] GameObject dialogueImage;
@@ -20,6 +21,8 @@ public class DialogueManager : MonoBehaviour
     int currentLine = 0;
     int currentDialogue = 0;
     bool isTypingDialogue, isTypingTitle;
+
+    public CutsceneManager GetCutsceneManager() { return cutsceneManager; }
 
     public IEnumerator ShowDialogue(List<Dialog> dialogues)
     {

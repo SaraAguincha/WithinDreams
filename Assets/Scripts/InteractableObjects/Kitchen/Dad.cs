@@ -80,11 +80,9 @@ public class Dad : MonoBehaviour, Interactable
 
     IEnumerator eggsAndBaconCutsceneStart(DialogueManager dialogueManager)
     {
+        CutsceneManager cutsceneManager = dialogueManager.GetCutsceneManager();
         // Fade in Panel
-        if (fadeInPanel != null)
-        {
-            fadeInPanelInstance = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity);
-        }
+        fadeInPanelInstance = cutsceneManager.StartCutscene(fadeInPanel);
         // Eating Dialogue
         eatingDialogue = true;
         yield return new WaitForSeconds(2);
@@ -93,13 +91,14 @@ public class Dad : MonoBehaviour, Interactable
 
     IEnumerator eggsAndBaconCutsceneEnd(DialogueManager dialogueManager)
     {
+        CutsceneManager cutsceneManager = dialogueManager.GetCutsceneManager();
         eatingDialogue = false;
-        if (fadeOutPanel != null)
-        {
-            fadeOutPanelInstance = Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
-        }
-        Destroy(fadeInPanelInstance);
-        Destroy(fadeOutPanelInstance, 3);
+
+        // Transition from fade in to fade out
+        fadeOutPanelInstance = cutsceneManager.StartCutscene(fadeOutPanel);
+        cutsceneManager.EndCutscene(fadeInPanelInstance);
+        cutsceneManager.EndCutscene(fadeOutPanelInstance, 3);
+
         yield return new WaitForSeconds(0.5f);
         yield return StartCoroutine(dialogueManager.ShowDialogue(completedQuestAfter)); 
         cutsceneAllowed = false;

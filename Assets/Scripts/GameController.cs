@@ -3,42 +3,54 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Dialog, Pause }
+public enum GameState { FreeRoam, Dialog, Pause, Cutscene }
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] DialogueManager dialogueManager;
     [SerializeField] PauseManager pauseManager;
+    [SerializeField] CutsceneManager cutsceneManager;
 
-    GameState state;
+    Stack<GameState> statesStack;
 
     private void Start()
     {
+        statesStack = new Stack<GameState>();
+        statesStack.Push(GameState.FreeRoam);
         DialogueManager.OnShowDialog += () =>
         {
-            state = GameState.Dialog;
+            statesStack.Push(GameState.Dialog);
         };
 
         DialogueManager.OnCloseDialog += () =>
         {
-            if (state == GameState.Dialog)
-                state = GameState.FreeRoam;
+            statesStack.Pop();
         };
 
         PlayerController.requestPause += () =>
         {
-            state = GameState.Pause;
+            statesStack.Push(GameState.Pause);
         };
 
         PauseManager.requestUnpause += () =>
         {
-            state = GameState.FreeRoam;
+            statesStack.Pop();
+        };
+
+        CutsceneManager.onStartCutscene += () =>
+        {
+            statesStack.Push(GameState.Cutscene);
+        };
+
+        CutsceneManager.onEndCutscene += () =>
+        {
+            statesStack.Pop();
         };
     }
 
     private void Update()
     {
-        switch (state)
+        switch (statesStack.Peek())
         {
             case GameState.FreeRoam:
                 playerController.HandleUpdate();
@@ -49,8 +61,12 @@ public class GameController : MonoBehaviour
             case GameState.Pause:
                 pauseManager.HandleUpdate();
                 break;
+            case GameState.Cutscene:
+                cutsceneManager.HandleUpdate();
+                break;
             default: 
-                state = GameState.FreeRoam;
+                statesStack.Clear();
+                statesStack.Push(GameState.FreeRoam);
                 break;
         }
     }
