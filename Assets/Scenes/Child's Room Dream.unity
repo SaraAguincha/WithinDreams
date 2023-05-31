@@ -539,7 +539,7 @@ MonoBehaviour:
     imagePath: placeholder
   - lines:
     - Do you think you're able to find him?
-    - If I had to guess, I would say that he is in this house.
+    - If I had to guess, I would say that he is in the house.
     - But somewhere far from your room.
     title: Moowie
     imagePath: 

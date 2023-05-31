@@ -2084,6 +2084,11 @@ MonoBehaviour:
     - You received Book.
     title: 
     imagePath: 
+  questCompletedDialogue:
+  - lines:
+    - It's a bookshelf. So books don't get left on the ground.
+    title: 
+    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   questMilestone: moowieStartQuest
   unlockedMilestone: moowieAllSet

@@ -6,6 +6,7 @@ public class Bookshelf : MonoBehaviour, Interactable
 {
     [SerializeField] List<Dialog> defaultDialogue;
     [SerializeField] List<Dialog> questDialogue;
+    [SerializeField] List<Dialog> questCompletedDialogue;
 
 
     [SerializeField] Milestones milestones;
@@ -16,9 +17,13 @@ public class Bookshelf : MonoBehaviour, Interactable
     {
         if (milestones.getBoolMilestone(questMilestone))
         {
-            StartCoroutine(dialogueManager.ShowDialogue(questDialogue));
-            if (unlockedMilestone != "")
+            if (milestones.getBoolMilestone(unlockedMilestone))
+                StartCoroutine(dialogueManager.ShowDialogue(questCompletedDialogue));
+            else
+            {
+                StartCoroutine(dialogueManager.ShowDialogue(questDialogue));
                 milestones.addMilestone(unlockedMilestone, true);
+            }
         }
         else
             StartCoroutine(dialogueManager.ShowDialogue(defaultDialogue));
