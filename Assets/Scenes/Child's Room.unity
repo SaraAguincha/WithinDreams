@@ -209,7 +209,7 @@ MonoBehaviour:
     - It's the desk where I do my homework.
     - I should probably do it like my dad said.
     - But I don't really feel like it.
-    - Perhaps i should check on my teddies...
+    - Perhaps i should check on my friends...
     title: You
     imagePath: placeholder
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}

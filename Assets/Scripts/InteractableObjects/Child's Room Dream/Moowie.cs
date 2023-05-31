@@ -17,6 +17,7 @@ public class Moowie : MonoBehaviour, Interactable
 
     [SerializeField] BooleanValue moowieBookInstance;
     [SerializeField] BooleanValue moowieFriendInstance;
+    [SerializeField] public GameObject meowieInstance;
 
     public string interactionMilestone;
     public string startQuestMilestone;
@@ -36,6 +37,7 @@ public class Moowie : MonoBehaviour, Interactable
         }
         else if (milestones.getBoolMilestone(homeworkAllSetMilestone))
         {
+            meowieInstance.SetActive(true);
             StartCoroutine(dialogueManager.ShowDialogue(homeworkAllSet));
             milestones.addMilestone(completedHomeworkQuestMilestone, true);
         }
