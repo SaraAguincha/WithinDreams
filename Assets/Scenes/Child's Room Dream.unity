@@ -587,6 +587,7 @@ MonoBehaviour:
   moowieBookInstance: {fileID: 11400000, guid: 015513ee889c5dd4992543b7197cde0d, type: 2}
   flopsyInstance: {fileID: 11400000, guid: 9ebc623b498252148a7a2fa9d12a2ab6, type: 2}
   flopsy: {fileID: 1821050046}
+  moowieInstance: {fileID: 612746693}
   fadeInPanel: {fileID: 3496995683453612401, guid: 1498980c03560e249aba8a029fbe7d8c, type: 3}
   fadeOutPanel: {fileID: 5491482619005305553, guid: a2d17a90447d9b24b84bd9ab3664be9f, type: 3}
   interactionMilestone: moowieStartInteraction

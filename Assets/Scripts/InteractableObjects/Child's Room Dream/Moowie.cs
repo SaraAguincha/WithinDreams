@@ -19,6 +19,7 @@ public class Moowie : MonoBehaviour, Interactable
     [SerializeField] BooleanValue moowieBookInstance;
     [SerializeField] BooleanValue flopsyInstance;
     [SerializeField] public GameObject flopsy;
+    [SerializeField] public GameObject moowieInstance;
 
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
@@ -43,6 +44,15 @@ public class Moowie : MonoBehaviour, Interactable
     private void Awake()
     {
         DialogueManager.OnCloseDialog += mirrorTrigger;
+
+        if (milestones.getBoolMilestone(completedHomeworkQuestMilestone))
+        {
+            moowieInstance.SetActive(false);
+        }
+        else
+            moowieInstance.SetActive(true);
+
+
     }
 
     private void OnDestroy()
@@ -126,8 +136,9 @@ public class Moowie : MonoBehaviour, Interactable
         flopsyInstance.setFalse();
         flopsy.SetActive(false);
         cutsceneAllowed = false;
-        this.gameObject.SetActive(false);
+        moowieInstance.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
     }
+
 }
