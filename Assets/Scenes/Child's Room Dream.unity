@@ -529,28 +529,25 @@ MonoBehaviour:
     imagePath: placeholder
   - lines:
     - Do you still remeber Flopsy?
-    - He used to be beside me in your room, but I haven't seen him in a long while...
+    - She used to be beside me in your room, but I haven't seen her in a long while...
     title: Moowie
     imagePath: 
   - lines:
-    - Of course I remeber him!
-    - He was one of my favorites but Dad can't recall where he stored him...
+    - Of course I remeber her!
+    - She was one of my favorites but Dad can't recall where he stored her...
     title: You
     imagePath: placeholder
   - lines:
-    - Do you think you're able to find him?
-    - If I had to guess, I would say that he is in the house.
+    - Do you think you're able to find her?
+    - If I had to guess, I would say that she is in the house.
     - But somewhere far from your room.
     title: Moowie
     imagePath: 
   - lines:
-    - I will try my best to find him!
+    - I will try my best to find her!
     - -- I really want to see Mom --
     title: You
     imagePath: placeholder
-  - lines: []
-    title: 
-    imagePath: 
   homeworkAllSet:
   - lines:
     - Moowie! I found Flopsy!
