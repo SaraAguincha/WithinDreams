@@ -207,7 +207,7 @@ MonoBehaviour:
   questDialogue:
   - lines:
     - It's the desk where I do my homework.
-    - I should probably do it like my dad said.
+    - I should probably do it like Dad said.
     - But I don't really feel like it.
     - Perhaps i should check on my friends...
     title: You
@@ -7835,6 +7835,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5675485234673682720, guid: c70b5409f62faa24089042992369911d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675485234673682720, guid: c70b5409f62faa24089042992369911d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8ccf089b030a6f48a161284e7227c69, type: 3}
+    - target: {fileID: 5675485234673682720, guid: c70b5409f62faa24089042992369911d, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7496395481527516743, guid: c70b5409f62faa24089042992369911d, type: 3}
       propertyPath: inventoryUI
       value: 

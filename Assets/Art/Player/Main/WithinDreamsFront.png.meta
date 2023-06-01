@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d2381548d15f1b488314b07bfef6cf4
-      internalID: 2012264865
+      spriteID: 11b987567db84cf489eacccd4ce071c5
+      internalID: 839002646
       vertices: []
       indices: 
       edges: []
@@ -152,8 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a5f92e15de757f4a9d02e0ce0a6d3c5
-      internalID: 1228914401
+      spriteID: 2e92b50d0a8dd3a4fa5cf1ce41919cde
+      internalID: -1164509171
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb59f58268cb0d341a82127e9e0cdc6d
-      internalID: -49310407
+      spriteID: f8a7b9467e1d9954d8430799227cee9c
+      internalID: 575895591
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85dbf522c0a375841a9f3722c3810946
-      internalID: -772292035
+      spriteID: cf3ba43c9a126fe48a690c9644590a70
+      internalID: 490776241
       vertices: []
       indices: 
       edges: []
@@ -211,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WithinDreamsFront_0: 2012264865
-      WithinDreamsFront_1: 1228914401
-      WithinDreamsFront_2: -49310407
-      WithinDreamsFront_3: -772292035
+      WithinDreamsFront_0: 839002646
+      WithinDreamsFront_1: -1164509171
+      WithinDreamsFront_2: 575895591
+      WithinDreamsFront_3: 490776241
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

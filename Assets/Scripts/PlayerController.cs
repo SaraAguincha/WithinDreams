@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Milestones milestones;
 
+    [SerializeField]
+    private AudioSource footsteps;
+
     public static event Action requestPause;
 
     private void Start()
@@ -68,12 +71,18 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat("moveX", input.x);
                 animator.SetFloat("moveY", input.y);
 
+                footsteps.enabled = true;
+
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
                 if (IsWalkable(targetPos))
                     StartCoroutine(MoveCharacter(targetPos));
+            }
+            else
+            {
+                footsteps.enabled = false;
             }
         }
         animator.SetBool("isMoving", isMoving);
@@ -155,7 +164,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
 
     IEnumerator MoveCharacter(Vector3 targetPos)
     {

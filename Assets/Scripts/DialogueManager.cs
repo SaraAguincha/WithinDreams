@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Text dialogueText;
     [SerializeField] Text dialogueTitleText;
     [SerializeField] int lettersPerSecond;
+    [SerializeField] AudioSource dialogueAudio;
 
     public static event Action OnShowDialog;
     public static event Action OnCloseDialog;
@@ -98,12 +99,13 @@ public class DialogueManager : MonoBehaviour
         isTypingDialogue = true;
 
         dialogueText.text = "";
+        dialogueAudio.Play();
         foreach (var letter in line.ToCharArray())
-        {
+        {     
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
-
+        dialogueAudio.Stop();
         isTypingDialogue = false;
     }
 
