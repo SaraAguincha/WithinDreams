@@ -11,6 +11,8 @@ public class Dad : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> completedQuestAfter;        //Let's eat breakfast -> cutscene
     [SerializeField] List<Dialog> eating;
     [SerializeField] List<Dialog> afterQuest;                 //Go do your homework for tomorrow
+    [SerializeField] List<Dialog> flopsyQuestHelp;
+    [SerializeField] List<Dialog> flopsyQuestHelpAfter;
 
 
     [SerializeField] Milestones milestones;
@@ -22,6 +24,8 @@ public class Dad : MonoBehaviour, Interactable
     public string startQuestMilestone;
     public string completedQuestMilestone;
     public string afterQuestMilestone;
+    public string flopsyQuestMilestone;
+    public string afterFlopsyQuestMilestone;
 
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
@@ -45,7 +49,15 @@ public class Dad : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(afterQuestMilestone))
+        if (milestones.getBoolMilestone(afterFlopsyQuestMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(flopsyQuestHelpAfter));
+        }
+        else if (milestones.getBoolMilestone(flopsyQuestMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(flopsyQuestHelp));
+        }
+        else if (milestones.getBoolMilestone(afterQuestMilestone))
         {
             StartCoroutine(dialogueManager.ShowDialogue(afterQuest));
         }

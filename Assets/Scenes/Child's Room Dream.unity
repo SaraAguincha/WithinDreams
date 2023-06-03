@@ -407,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612746693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1088295, y: -2.0565681, z: 0}
+  m_LocalPosition: {x: 4, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -514,7 +514,7 @@ MonoBehaviour:
     imagePath: placeholder
   startHomeworkQuest:
   - lines:
-    - Hi Moowie! Do you know where's Mom?
+    - Hi Moowie! Do you know where Mom is?
     - She disappeared...
     title: You
     imagePath: placeholder
@@ -548,6 +548,12 @@ MonoBehaviour:
     - (I really want to see Mom)
     title: You
     imagePath: placeholder
+  duringHomeworkQuest:
+  - lines:
+    - If I had to guess, I would say that she is in the house.
+    - But somewhere far from your room.
+    title: Moowie
+    imagePath: 
   homeworkAllSet:
   - lines:
     - Moowie! I found Flopsy!
@@ -5035,7 +5041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821050046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.09, y: -2.42, z: 0}
+  m_LocalPosition: {x: 6, y: -3, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5368,7 +5374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880861792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4273,7 +4273,7 @@ MonoBehaviour:
   - lines:
     - You haven't found them? That's weird!
     - Are you sure you checked the fridge?
-    - Maybe you are still sleepy hahaha
+    - Maybe you are still sleepy hahaha.
     title: Dad
     imagePath: 
   - lines:
@@ -4316,11 +4316,27 @@ MonoBehaviour:
     - Okaay, I'll be going then!
     title: You
     imagePath: placeholder
+  flopsyQuestHelp:
+  - lines:
+    - Dad, do you remember where you put Flopsy?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - No, honey. I forgot, but i think it was somewhere in the living room...
+    title: Dad
+    imagePath: 
+  flopsyQuestHelpAfter:
+  - lines:
+    - You should really do your homework, sweetie.
+    title: Dad
+    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   dadEggInstance: {fileID: 2137754859}
   startQuestMilestone: dadEggQuest
   completedQuestMilestone: dadEggCompletedQuest
   afterQuestMilestone: dadEggAfterQuest
+  flopsyQuestMilestone: deskHomeworkDuring
+  afterFlopsyQuestMilestone: deskHomeworkAllSet
   fadeInPanel: {fileID: 3496995683453612401, guid: 1498980c03560e249aba8a029fbe7d8c, type: 3}
   fadeOutPanel: {fileID: 5491482619005305553, guid: a2d17a90447d9b24b84bd9ab3664be9f, type: 3}
 --- !u!61 &1469115160
@@ -5534,7 +5550,7 @@ MonoBehaviour:
     - This is our Fridge! It used to be always full to the top.
     - But for some reason, now it's somewhat empty.
     title: You
-    imagePath: 
+    imagePath: placeholder
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   questMilestone: dadEggQuest
   unlockedMilestone: dadEggCompletedQuest

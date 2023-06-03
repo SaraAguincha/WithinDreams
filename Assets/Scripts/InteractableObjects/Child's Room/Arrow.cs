@@ -7,8 +7,7 @@ public class Arrow : MonoBehaviour
 
     [SerializeField] Milestones milestones;
 
-    // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         if (milestones.getBoolMilestone("dreamWorldUnlocked"))
             this.gameObject.SetActive(false);

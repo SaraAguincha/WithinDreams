@@ -11,6 +11,7 @@ public class Moowie : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> allSet;
     [SerializeField] List<Dialog> completedQuest;
     [SerializeField] List<Dialog> startHomeworkQuest;
+    [SerializeField] List<Dialog> duringHomeworkQuest;
     [SerializeField] List<Dialog> homeworkAllSet;
     [SerializeField] List<Dialog> cutsceneDialogue;
 
@@ -69,6 +70,10 @@ public class Moowie : MonoBehaviour, Interactable
             selfDialogueManager = dialogueManager;
             StartCoroutine(dialogueManager.ShowDialogue(homeworkAllSet));
             milestones.addMilestone(completedHomeworkQuestMilestone, true);
+        }
+        else if (milestones.getBoolMilestone(duringHomeworkMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(duringHomeworkQuest));
         }
         else if (milestones.getBoolMilestone(startHomeworkQuestMilestone))
         {
