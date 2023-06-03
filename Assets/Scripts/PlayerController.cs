@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(panel);
             Destroy(panel, 5);
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.9f);
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
         while(!asyncOperation.isDone)
         {
