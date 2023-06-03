@@ -7,6 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
+    guid: 095f0991dbbb08a4bb2aa50e9875d541
+  - enabled: 1
+    path: Assets/Scenes/ControlsMenu.unity
     guid: 0f5784fac779a42409e6a943271186c6
   - enabled: 1
     path: Assets/Scenes/Child's Room.unity
