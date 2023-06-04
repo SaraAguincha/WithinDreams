@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private bool isMoving;
 
     public float speed;
+    private float initialSpeed;
     public VectorValue startingPosition;
     private Vector2 input;
 
@@ -78,7 +79,12 @@ public class PlayerController : MonoBehaviour
                 targetPos.y += input.y;
 
                 if (IsWalkable(targetPos))
-                    StartCoroutine(MoveCharacter(targetPos));
+                {
+                    initialSpeed = speed;
+                    speed = Input.GetKey(KeyCode.LeftShift) ? speed * 1.5f : speed;
+                    StartCoroutine(MoveCharacter(targetPos, speed));
+                    speed = initialSpeed;
+                }
             }
             else
             {
@@ -154,7 +160,7 @@ public class PlayerController : MonoBehaviour
             transitionCollider.GetComponent<Interactable>()?.Interact(dialogManager);
         }
 
-         if (itemCollider != null)
+        if (itemCollider != null)
         {
             Item item = itemCollider.GetComponent<Item>();
             int remainder = inventoryData.AddItem(item.InventoryItem, item.Quantity);
@@ -165,7 +171,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    IEnumerator MoveCharacter(Vector3 targetPos)
+    IEnumerator MoveCharacter(Vector3 targetPos, float speed)
     {
         isMoving = true;
         while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)

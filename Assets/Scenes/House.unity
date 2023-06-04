@@ -3985,7 +3985,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1345090719
 Rigidbody2D:
   serializedVersion: 4
@@ -4133,9 +4133,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11102411, y: -0.02798764}
+  m_Offset: {x: 0.12582414, y: -0.02798764}
   serializedVersion: 2
-  m_Radius: 0.29912886
+  m_Radius: 0.28432882
 --- !u!212 &1345090723
 SpriteRenderer:
   m_ObjectHideFlags: 0
