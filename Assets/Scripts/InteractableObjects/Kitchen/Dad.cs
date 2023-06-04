@@ -24,6 +24,7 @@ public class Dad : MonoBehaviour, Interactable
     public string startQuestMilestone;
     public string completedQuestMilestone;
     public string afterQuestMilestone;
+    public string disableArrowMilestone;
     public string flopsyQuestMilestone;
     public string afterFlopsyQuestMilestone;
 
@@ -59,6 +60,7 @@ public class Dad : MonoBehaviour, Interactable
         }
         else if (milestones.getBoolMilestone(afterQuestMilestone))
         {
+            milestones.addMilestone(disableArrowMilestone, true);
             StartCoroutine(dialogueManager.ShowDialogue(afterQuest));
         }
         else if (milestones.getBoolMilestone(completedQuestMilestone))
