@@ -4275,9 +4275,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12582414, y: -0.02798764}
+  m_Offset: {x: 0.12582414, y: -0.029780352}
   serializedVersion: 2
-  m_Radius: 0.28432882
+  m_Radius: 0.2829696
 --- !u!212 &1345090723
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4941,7 +4941,7 @@ MonoBehaviour:
   questDialogue:
   - lines:
     - It's a cabinet.
-    - It appears to have the friend that Moowie asked you to retrieve.
+    - It appears to have the friend that Moowie asked you to retrieve!
     - You have grabbed Flopsy.
     title: 
     imagePath: 
