@@ -739,6 +739,27 @@ MonoBehaviour:
     - They seem to have vanished.
     title: 
     imagePath: 
+  afterFirstParkQuest:
+  - lines:
+    - Hello again, Moowie.
+    - That was so weird... What just happened?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - What you just witnessed was a memory. It was something that happened a while
+      ago.
+    - It's a way for you to find out what happened to your mom!
+    title: Moowie
+    imagePath: 
+  - lines:
+    - Oh ok, I get it now.
+    - I just learned that mom was writing a children's book about a princess and
+      you guys.
+    - And dad wasn't very supportive.
+    - Perhaps it has something to do with that...
+    - Too bad she is still missing. I miss her...
+    title: You
+    imagePath: placeholder
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieBookInstance: {fileID: 11400000, guid: 015513ee889c5dd4992543b7197cde0d, type: 2}
   flopsyInstance: {fileID: 11400000, guid: 9ebc623b498252148a7a2fa9d12a2ab6, type: 2}
@@ -755,6 +776,7 @@ MonoBehaviour:
   duringHomeworkMilestone: deskHomeworkDuring
   homeworkAllSetMilestone: deskHomeworkAllSet
   completedHomeworkQuestMilestone: deskHomeworkCompleted
+  afterFirstParkMilestone: momParkAfterDad
 --- !u!1 &641507659
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,6 +5596,7 @@ GameObject:
   - component: {fileID: 1821050049}
   - component: {fileID: 1821050048}
   - component: {fileID: 1821050047}
+  - component: {fileID: 1821050051}
   m_Layer: 6
   m_Name: Flopsy
   m_TagString: Untagged
@@ -5695,6 +5718,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821050051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821050046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4057c0462cb02e4390f3ed0757b4b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - lines:
+    - Thanks for bringing me here!
+    title: Flopsy
+    imagePath: 
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  unlockedMilestone: 
 --- !u!1 &1874995107
 GameObject:
   m_ObjectHideFlags: 0
@@ -5888,6 +5930,7 @@ MonoBehaviour:
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieVanished: deskHomeworkCompleted
   enterMirrorAllowed: enterMirrorAllowed
+  afterFirstParkQuest: momParkAfterDad
   playerPosition: {x: 7, y: 0}
   playerInfo: {fileID: 11400000, guid: 63d25a0c12b9511468b04fe3481ecc82, type: 2}
   sceneInfo: {fileID: 11400000, guid: 89d3c77d9f8a883479add67dcf7e797d, type: 2}
@@ -6074,11 +6117,16 @@ MonoBehaviour:
     title: Mom
     imagePath: 
   parkDialogue: []
+  afterMailboxDialogue: []
+  afterFirstDadDialogue: []
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   momInstance: {fileID: 1880861792}
   firstParkVisit: enterMirrorAllowed
+  afterMailbox: momParkAfterMailbox
   homeworkQuestMilestone: deskHomeworkQuest
   unlockedMilestone: moowieStartInteraction
+  unlockedParkMilestone: momFirstParkQuestStart
+  unlockedSecondParkMilestone: momParkAfterDad
 --- !u!1 &2106214246
 GameObject:
   m_ObjectHideFlags: 0

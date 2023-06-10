@@ -14,6 +14,7 @@ public class Moowie : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> duringHomeworkQuest;
     [SerializeField] List<Dialog> homeworkAllSet;
     [SerializeField] List<Dialog> cutsceneDialogue;
+    [SerializeField] List<Dialog> afterFirstParkQuest;
 
     [SerializeField] Milestones milestones;
 
@@ -41,19 +42,21 @@ public class Moowie : MonoBehaviour, Interactable
     public string duringHomeworkMilestone;
     public string homeworkAllSetMilestone;
     public string completedHomeworkQuestMilestone;
+    public string afterFirstParkMilestone;
 
     private void Awake()
     {
         DialogueManager.OnCloseDialog += mirrorTrigger;
 
-        if (milestones.getBoolMilestone(completedHomeworkQuestMilestone))
+        if (milestones.getBoolMilestone(afterFirstParkMilestone))
         {
-            moowieInstance.SetActive(false);
+            moowieInstance.SetActive(true);
+            flopsy.SetActive(true);
         }
+        else if (milestones.getBoolMilestone(completedHomeworkQuestMilestone))
+            moowieInstance.SetActive(false);
         else
             moowieInstance.SetActive(true);
-
-
     }
 
     private void OnDestroy()
@@ -63,7 +66,11 @@ public class Moowie : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(homeworkAllSetMilestone))
+        if (milestones.getBoolMilestone(afterFirstParkMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(afterFirstParkQuest));
+        }
+        else if (milestones.getBoolMilestone(homeworkAllSetMilestone))
         {
             flopsy.SetActive(true);
             cutsceneAllowed = true;

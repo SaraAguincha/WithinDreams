@@ -12,6 +12,7 @@ public class Mirror : MonoBehaviour, Interactable
 
     [SerializeField] string moowieVanished;
     [SerializeField] string enterMirrorAllowed;
+    [SerializeField] string afterFirstParkQuest;
 
     public Vector2 playerPosition;
     public VectorValue playerInfo;
@@ -20,7 +21,11 @@ public class Mirror : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(enterMirrorAllowed))
+        if (milestones.getBoolMilestone(afterFirstParkQuest))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(defaultDialogue));
+        }
+        else if (milestones.getBoolMilestone(enterMirrorAllowed))
         {
             playerInfo.initialValue = playerPosition;
             if (SceneUtility.GetBuildIndexByScenePath("Playground") > 0)
