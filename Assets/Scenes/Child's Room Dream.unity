@@ -5885,15 +5885,13 @@ MonoBehaviour:
     - -- Perhaps I might try to enter the Mirror... --
     title: You
     imagePath: placeholder
-  demoEndDialogue:
-  - lines:
-    - Thanks for playing!
-    - Feel free to give us any feedback about the game!
-    title: Developers
-    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieVanished: deskHomeworkCompleted
   enterMirrorAllowed: enterMirrorAllowed
+  playerPosition: {x: 7, y: 0}
+  playerInfo: {fileID: 11400000, guid: 63d25a0c12b9511468b04fe3481ecc82, type: 2}
+  sceneInfo: {fileID: 11400000, guid: 89d3c77d9f8a883479add67dcf7e797d, type: 2}
+  dreamWorldPanel: {fileID: 972817874304640102, guid: e19f29a632f5d6a4f8038cdee9f2a014, type: 3}
 --- !u!1 &1880861792
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,7 +6038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb7404253b721f46878e3bd5a195f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
+  firstDialogue:
   - lines:
     - Mom?
     title: You
@@ -6075,8 +6073,10 @@ MonoBehaviour:
     - I think Moowie has a request for you. Talk to him.
     title: Mom
     imagePath: 
+  parkDialogue: []
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   momInstance: {fileID: 1880861792}
+  firstParkVisit: enterMirrorAllowed
   homeworkQuestMilestone: deskHomeworkQuest
   unlockedMilestone: moowieStartInteraction
 --- !u!1 &2106214246

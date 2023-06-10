@@ -5245,7 +5245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - lines:
-    - Cool, I still have some food left!
+    - No more food left. I ate everything...
     title: You
     imagePath: placeholder
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
@@ -5626,7 +5626,6 @@ MonoBehaviour:
     imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: dreamWorldUnlocked
-  arrowInstance: {fileID: 2007252776}
 --- !u!1 &2007252776
 GameObject:
   m_ObjectHideFlags: 0
