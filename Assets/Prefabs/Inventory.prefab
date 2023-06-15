@@ -366,6 +366,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 7744192518178023362, guid: 8a6d7c8d40ee9f549be5a44951528946, type: 3}
   contentPanel: {fileID: 8388492670072814}
   itemDescription: {fileID: 6797435328259301334}
+  mouseFollower: {fileID: 0}
 --- !u!1 &8388492478303114
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,15 +635,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 30
-    m_Right: 20
-    m_Top: 30
+    m_Left: 49
+    m_Right: 30
+    m_Top: 40
     m_Bottom: 30
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 70, y: 70}
-  m_Spacing: {x: 35, y: 45}
+  m_CellSize: {x: 74, y: 74}
+  m_Spacing: {x: 65, y: 65}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &8388492716641164

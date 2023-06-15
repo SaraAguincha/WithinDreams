@@ -6867,6 +6867,34 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_Spacing.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_Spacing.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_CellSize.x
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_CellSize.y
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737775214298908799, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b415816cd7f8b64db91b0e642077189, type: 3}
 --- !u!114 &1570004524 stripped
