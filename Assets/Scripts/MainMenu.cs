@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
 
     public string firstScene;
     public string mainMenuScene;
-    public string controlsScene;
     public SceneName loadScene;
 
     public void NewGame()
@@ -19,11 +18,6 @@ public class MainMenu : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene(loadScene.getSceneName());
-    }
-
-    public void Controls()
-    {
-        SceneManager.LoadScene(controlsScene);
     }
 
     public void GoBack()
