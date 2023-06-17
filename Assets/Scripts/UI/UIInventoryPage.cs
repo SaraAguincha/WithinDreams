@@ -42,7 +42,6 @@ namespace Inventory.UI
                 uiItem.OnItemClicked += HandleItemSelection;
                 uiItem.OnItemBeginDrag += HandleBeginDrag;
                 uiItem.OnItemDroppedOn += HandleSwap;
-                uiItem.OnItemEndDrag += HandleEndDrag;
             }
         }
 
@@ -54,23 +53,12 @@ namespace Inventory.UI
             }
         }
 
-        private void HandleEndDrag(UIInventoryItem inventoryItemUI)
-        {
-            ResetDraggedItem();
-        }
-
         private void HandleSwap(UIInventoryItem inventoryItemUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemUI);
             if (index == -1) return;
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
             HandleItemSelection(inventoryItemUI);
-        }
-
-        private void ResetDraggedItem()
-        {
-            mouseFollower.Toggle(false);
-            currentlyDraggedItemIndex = -1;
         }
 
         private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
@@ -118,7 +106,6 @@ namespace Inventory.UI
         public void Hide()
         {
             gameObject.SetActive(false);
-            ResetDraggedItem();
         }
 
         internal void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)
