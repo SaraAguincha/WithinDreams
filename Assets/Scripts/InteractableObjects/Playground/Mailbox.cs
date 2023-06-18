@@ -14,7 +14,7 @@ public class Mailbox : MonoBehaviour, Interactable
 
     [SerializeField] public GameObject dad;
 
-    private void Update()
+    private void Awake()
     {
         if (!milestones.getBoolMilestone(afterFirstMomTalk))
             dad.SetActive(false);

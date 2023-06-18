@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 54810638}
   - component: {fileID: 54810637}
   - component: {fileID: 54810636}
-  - component: {fileID: 54810635}
+  - component: {fileID: 54810640}
   m_Layer: 6
   m_Name: Mom
   m_TagString: Untagged
@@ -143,150 +143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &54810635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54810634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb7404253b721f46878e3bd5a195f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstDialogue:
-  - lines:
-    - Mom?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - Hello, sweetie.
-    title: Mom
-    imagePath: 
-  - lines:
-    - Why are you here?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - We're not in the Real World, this is your Dream World.
-    - Anything that you imagine can be here!
-    title: Mom
-    imagePath: 
-  - lines:
-    - This sounds fun! All my plushies are here!
-    title: You
-    imagePath: placeholder
-  - lines:
-    - You can talk with them! They might ask you a few requests and give you something
-      back for them.
-    title: Mom
-    imagePath: 
-  - lines:
-    - Woooooow.
-    title: You
-    imagePath: placeholder
-  - lines:
-    - I think Moowie has a request for you. Talk to him.
-    title: Mom
-    imagePath: 
-  parkDialogue:
-  - lines:
-    - Hi, Mom! I missed you!
-    title: You
-    imagePath: placeholder
-  - lines:
-    - I missed you too, honey.
-    title: Mom
-    imagePath: 
-  - lines:
-    - What are you doing here with that book?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - I'm writing my children's book, sweetie. It was my passion, remember?
-    title: Mom
-    imagePath: 
-  - lines:
-    - Oh yeah, you're right! I remember you were never able to follow your dream...
-    - I'm glad you're finally doing it, Mom! What's it about?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - It's a fable about a princess and monsters.
-    - Ah, and your plushies are all there too! Moowie, Flopsy, Pingu... The whole
-      gang is present!
-    title: Mom
-    imagePath: 
-  - lines:
-    - Wow!! That's so cool! I can't wait to read it!
-    title: You
-    imagePath: placeholder
-  - lines:
-    - Thanks, honey! Now, feel free to walk around the park for a little.
-    title: Mom
-    imagePath: 
-  afterMailboxDialogue:
-  - lines:
-    - Hi, honey. What are you doing?
-    title: Dad
-    imagePath: 
-  - lines:
-    - Hello, honey! I'm writing my book.
-    - I'm very excited to finally get this done!
-    title: Mom
-    imagePath: 
-  - lines:
-    - Oh you're doing that again... Alright.
-    title: Dad
-    imagePath: 
-  - lines:
-    - Is there something wrong, honey?
-    title: Mom
-    imagePath: 
-  - lines:
-    - No no. It's just that I don't really see the point of that.
-    - You have a great life. I don't get why you should waste your time on that.
-    title: Dad
-    imagePath: 
-  - lines:
-    - Because it's something I've always dreamt of. We've talked about this, honey.
-    - Do you not like it?
-    title: Mom
-    imagePath: 
-  - lines:
-    - It's ok. I just think you could be doing better things.
-    - That isn't going to lead anywhere and I highly doubt it will be a hit...
-    title: Dad
-    imagePath: 
-  - lines:
-    - Well, I don't care about any of that. It's a dream of mine and I will see it
-      through!
-    - Oh, hey sweetie! Didn't see you there.
-    title: Mom
-    imagePath: 
-  - lines:
-    - What are you guys talking about?
-    title: You
-    imagePath: placeholder
-  - lines:
-    - It's nothing, sweetie. Just grown up stuff.
-    - Perhaps we should go back home. It's almost time for lunch.
-    title: Mom
-    imagePath: 
-  afterFirstDadDialogue:
-  - lines:
-    - Perhaps we should go back home. It's almost time for lunch.
-    title: Mom
-    imagePath: 
-  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
-  momInstance: {fileID: 54810634}
-  firstParkVisit: enterMirrorAllowed
-  afterMailbox: momParkAfterMailbox
-  homeworkQuestMilestone: deskHomeworkQuest
-  unlockedMilestone: moowieStartInteraction
-  unlockedParkMilestone: momFirstParkQuestStart
-  unlockedSecondParkMilestone: momParkAfterDad
 --- !u!50 &54810636
 Rigidbody2D:
   serializedVersion: 4
@@ -401,6 +257,115 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &54810640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54810634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b072f9ca76fc7f440a7984cdcf987211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parkDialogue:
+  - lines:
+    - Hi Mom!
+    - I've finally found you!
+    - I missed you...
+    title: You
+    imagePath: placeholder
+  - lines:
+    - I missed you too, sweetie.
+    title: Mom
+    imagePath: 
+  - lines:
+    - What are you doing?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Writting a book, honey.
+    title: Mom
+    imagePath: 
+  - lines:
+    - Wow! What is it about?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - It's about Flopsy and Moowie and all their adventures.
+    - They live happily together, with many other friends.
+    title: Mom
+    imagePath: 
+  - lines:
+    - What other friends?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - There's Freezy the penguin, Meowie the cat and Boris the bear.
+    title: Mom
+    imagePath: 
+  - lines:
+    - Woow! When can I visit them?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Whenever you want, sweetie, whenever you want.
+    title: Mom
+    imagePath: 
+  - lines:
+    - Can I go play for a bit Mom?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Go for it, sweetie.
+    title: Mom
+    imagePath: 
+  afterMailboxDialogue:
+  - lines:
+    - I still don't get why you spend so much time writting that book...
+    title: Dad
+    imagePath: 
+  - lines:
+    - I've been wanting to write this for a long time.
+    - I don't get what you don't understand...
+    title: Mom
+    imagePath: 
+  - lines:
+    - You've been locked on your bedroom for weeks writting that thing.
+    - I rarely see you spend any time with our daughter.
+    title: Dad
+    imagePath: 
+  - lines:
+    - I'm doing this for me.
+    - I feel like this is my passion, it's what I love to do.
+    title: Mom
+    imagePath: 
+  - lines:
+    - I really don't get it.
+    title: Dad
+    imagePath: 
+  - lines:
+    - Mom, Dad, what are you talking about?
+    title: You
+    imagePath: placeholder
+  - lines:
+    - Nothing, sweetie.
+    - Perhaps we should head back home, it's almost time for lunch.
+    title: Mom
+    imagePath: 
+  afterFirstDadDialogue:
+  - lines:
+    - Perhaps we should head back home, it's almost time for lunch.
+    title: Mom
+    imagePath: 
+  milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
+  firstParkVisit: enterMirrorAllowed
+  afterMailbox: momParkAfterMailbox
+  homeworkQuestMilestone: deskHomeworkQuest
+  unlockedMilestone: moowieStartInteraction
+  unlockedParkMilestone: momFirstParkQuestStart
+  unlockedSecondParkMilestone: momParkAfterDad
 --- !u!1 &62354338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5401,7 +5366,7 @@ TilemapRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0.00024425983, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -6445,7 +6410,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0.00024425983, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

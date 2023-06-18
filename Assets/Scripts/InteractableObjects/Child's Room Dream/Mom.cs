@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,46 +20,20 @@ public class Mom : MonoBehaviour, Interactable
 
     public string homeworkQuestMilestone;
     public string unlockedMilestone;
-    public string unlockedParkMilestone;
-    public string unlockedSecondParkMilestone;
-    public void Interact(DialogueManager dialogueManager)
-    {
-        if (milestones.getBoolMilestone(unlockedSecondParkMilestone))
-        {
-            StartCoroutine(dialogueManager.ShowDialogue(afterFirstDadDialogue));
-        }
-        else if (milestones.getBoolMilestone(afterMailbox))
-        {
-            StartCoroutine(dialogueManager.ShowDialogue(afterMailboxDialogue));
-            milestones.addMilestone(unlockedSecondParkMilestone, true);
-        }
-        else if (milestones.getBoolMilestone(firstParkVisit))
-        {
-            StartCoroutine(dialogueManager.ShowDialogue(parkDialogue));
-            milestones.addMilestone(unlockedParkMilestone, true);
-        }
-        else
-        {
-            StartCoroutine(dialogueManager.ShowDialogue(firstDialogue));
 
-            if (unlockedMilestone != "")
-                milestones.addMilestone(unlockedMilestone, true);
+    private void Awake()
+    {
+        if (milestones.getBoolMilestone(homeworkQuestMilestone))
+        {
+            this.gameObject.SetActive(false);
         }
     }
 
-    public void Update()
+    public void Interact(DialogueManager dialogueManager)
     {
-        if (SceneManager.GetActiveScene().name == "Playground")
-        {
-            momInstance.SetActive(true);
-        }
-        else if (milestones.getBoolMilestone(homeworkQuestMilestone))
-        {
-            momInstance.SetActive(false);
-        }
-        else
-        {
-            momInstance.SetActive(true);
-        }
+        StartCoroutine(dialogueManager.ShowDialogue(firstDialogue));
+
+        if (unlockedMilestone != "")
+            milestones.addMilestone(unlockedMilestone, true);
     }
 }
