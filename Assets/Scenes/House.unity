@@ -743,7 +743,7 @@ MonoBehaviour:
   - lines:
     - This is where my dad keeps all his achievements.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &420883362
@@ -3697,7 +3697,7 @@ MonoBehaviour:
   - lines:
     - This is where we cook stuff!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1156132437
@@ -4856,7 +4856,7 @@ MonoBehaviour:
     - Yes I did!
     - Are you cooking breakfast? Do you need help?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - I don't think so sweetie.
     - .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
@@ -4867,7 +4867,7 @@ MonoBehaviour:
   - lines:
     - On it, Dad!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   duringQuest:
   - lines:
     - You haven't found them? That's weird!
@@ -4878,7 +4878,7 @@ MonoBehaviour:
   - lines:
     - I should check the fridge.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   completedQuestBefore:
   - lines:
     - Thank you, honey!
@@ -4889,7 +4889,7 @@ MonoBehaviour:
   - lines:
     - Thank you so much, Dad!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   eating:
   - lines:
     - Nom Nom Nom.
@@ -4904,7 +4904,7 @@ MonoBehaviour:
     - Yes, Dad!
     - It was very tasty, I'm as full as I can be!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - I'm so happy to see you enjoyed breakfast!
     - Well, now I think you should go upstairs and try to do some of your homework!
@@ -4914,12 +4914,12 @@ MonoBehaviour:
   - lines:
     - Okaay, I'll be going then!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   flopsyQuestHelp:
   - lines:
     - Dad, do you remember where you put Flopsy?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - No, honey. I forgot, but i think it was somewhere in the living room...
     title: Dad
@@ -5136,7 +5136,7 @@ MonoBehaviour:
   - lines:
     - It's a fireplace. It keeps us warm when it's cold.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1472288956
@@ -5289,7 +5289,7 @@ MonoBehaviour:
   - lines:
     - It's a kitchen table, designed especifically for eating!
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1499512520
@@ -5394,19 +5394,19 @@ MonoBehaviour:
   - lines:
     - It's a cabinet. It stores stuff.
     title: 
-    imagePath: 
+    imagePath: normalFace
   questDialogue:
   - lines:
     - It's a cabinet.
     - It appears to have the friend that Moowie asked you to retrieve!
     - You have grabbed Flopsy.
     title: 
-    imagePath: 
+    imagePath: normalFace
   questCompletedDialogue:
   - lines:
     - It's a cabinet. It stores stuff.
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   questMilestone: deskHomeworkDuring
   unlockedMilestone: deskHomeworkAllSet
@@ -5555,7 +5555,7 @@ MonoBehaviour:
   - lines:
     - My dad's stuff lying around...
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1516691706
@@ -5708,7 +5708,7 @@ MonoBehaviour:
   - lines:
     - It's a kitchen table, designed especifically for eating!
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1553536575
@@ -5969,7 +5969,7 @@ MonoBehaviour:
   - lines:
     - Where we eat when we have guests!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1869310117
@@ -6075,20 +6075,20 @@ MonoBehaviour:
     - This is our Fridge! It used to be always full to the top.
     - But for some reason, now it's somewhat empty.
     title: You
-    imagePath: 
+    imagePath: normalFace
   questDialogue:
   - lines:
     - Hmmmmm, nothing here . . . . . . . . . . .
     - Oh, here they are!
     - I already have the eggs. I just need to give them to dad!
     title: You
-    imagePath: 
+    imagePath: normalFace
   questCompletedDialogue:
   - lines:
     - This is our Fridge! It used to be always full to the top.
     - But for some reason, now it's somewhat empty.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   questMilestone: dadEggQuest
   unlockedMilestone: dadEggCompletedQuest
@@ -6286,7 +6286,7 @@ MonoBehaviour:
   - lines:
     - Look at all those books!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &2045952342

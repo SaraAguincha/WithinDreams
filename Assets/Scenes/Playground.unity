@@ -275,7 +275,7 @@ MonoBehaviour:
     - I've finally found you!
     - I missed you...
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - I missed you too, sweetie.
     title: Mom
@@ -283,7 +283,7 @@ MonoBehaviour:
   - lines:
     - What are you doing?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - Writting a book, honey.
     title: Mom
@@ -291,7 +291,7 @@ MonoBehaviour:
   - lines:
     - Wow! What is it about?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - It's about Flopsy and Moowie and all their adventures.
     - They live happily together, with many other friends.
@@ -300,7 +300,7 @@ MonoBehaviour:
   - lines:
     - What other friends?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - There's Freezy the penguin, Meowie the cat and Boris the bear.
     title: Mom
@@ -308,7 +308,7 @@ MonoBehaviour:
   - lines:
     - Woow! When can I visit them?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - Whenever you want, sweetie, whenever you want.
     title: Mom
@@ -316,7 +316,7 @@ MonoBehaviour:
   - lines:
     - Can I go play for a bit, Mom?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - Go for it, sweetie.
     title: Mom
@@ -348,7 +348,7 @@ MonoBehaviour:
   - lines:
     - Mom, Dad, what are you talking about?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - Nothing, sweetie.
     - Perhaps we should head back home, it's almost time for lunch.
@@ -669,12 +669,12 @@ MonoBehaviour:
   - lines:
     - My plushies are here! Can't wait to play with them!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   afterFirstMomTalkDialogue:
   - lines:
     - Time to finally play with you guys!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   - lines:
     - '*starts playing with the toys for a while*'
     title: 
@@ -685,12 +685,12 @@ MonoBehaviour:
     - I can't belive it's already noon.
     - Wait, is that Dad over there by Mom? When did he get here?
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   afterDadDialogue:
   - lines:
     - I think that's enough playing for today. Time to go home and have lunch!
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   afterFirstMomTalk: momFirstParkQuestStart
   afterDadTalk: momParkAfterDad

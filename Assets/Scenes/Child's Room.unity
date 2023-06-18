@@ -204,7 +204,7 @@ MonoBehaviour:
   - lines:
     - It's the desk where I do my homework.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   questDialogue:
   - lines:
     - It's the desk where I do my homework.
@@ -212,7 +212,7 @@ MonoBehaviour:
     - But I don't really feel like it.
     - Perhaps i should check on my friends...
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   questMilestone: dadEggAfterQuest
   unlockedMilestone: deskHomeworkQuest
@@ -361,7 +361,7 @@ MonoBehaviour:
   - lines:
     - It's a bookshelf. So books don't get left on the ground.
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &173852507
@@ -514,7 +514,7 @@ MonoBehaviour:
   - lines:
     - This is where I keep all my toys and school stuff.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &228800226
@@ -2077,19 +2077,19 @@ MonoBehaviour:
   - lines:
     - It's a bookshelf. So books don't get left on the ground.
     title: 
-    imagePath: 
+    imagePath: normalFace
   questDialogue:
   - lines:
     - It's a bookshelf.
     - It appears to have the book that Moowie asked you.
     - You received Book.
     title: 
-    imagePath: 
+    imagePath: normalFace
   questCompletedDialogue:
   - lines:
     - It's a bookshelf. So books don't get left on the ground.
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   questMilestone: moowieStartQuest
   unlockedMilestone: moowieAllSet
@@ -3073,7 +3073,7 @@ MonoBehaviour:
   - lines:
     - It's a mirror. It mirrors stuff!
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!1 &1494145108
@@ -3858,7 +3858,7 @@ MonoBehaviour:
   - lines:
     - It's a bed. Good for sleeping.
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1618290682
@@ -5247,7 +5247,7 @@ MonoBehaviour:
   - lines:
     - No more food left. I ate everything...
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1851123244
@@ -5400,7 +5400,7 @@ MonoBehaviour:
   - lines:
     - It's a wardrobe. It's where my clothes are stored.
     title: You
-    imagePath: placeholder
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &1918514421

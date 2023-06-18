@@ -973,7 +973,7 @@ MonoBehaviour:
   - lines:
     - Didn't know you could talk Moowie.
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Yes, I can talk.
     title: Moowie
@@ -981,7 +981,7 @@ MonoBehaviour:
   - lines:
     - Why didn't you ever talk back to me?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - You never asked me to.
     - Anyway, I have a favor to ask you.
@@ -990,7 +990,7 @@ MonoBehaviour:
   - lines:
     - What is it?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - You used to read a book about a cow named Moowie aloud.
     - I would really love if you read that book back to me once more!
@@ -999,7 +999,7 @@ MonoBehaviour:
   - lines:
     - Alright, I'll just have to find it...
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   duringQuest:
   - lines:
     - You used to read a book about a cow named Moowie aloud.
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   - lines:
     - Alright, I'll just have to find it...
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   allSet:
   - lines:
     - So, did you find the book?
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   - lines:
     - Yes, I found it!
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Yay!
     title: Moowie
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   - lines:
     - '*starts reading a book passage*'
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Words can't describe how happy I am!
     title: Moowie
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     - I'm happy for you Moowie!
     - (I'm hungry, perhaps I should go eat breakfast.)
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   completedQuest:
   - lines:
     - Words can't describe how happy I am!
@@ -1045,13 +1045,13 @@ MonoBehaviour:
     - I'm happy for you Moowie!
     - (I'm hungry, perhaps I should go eat breakfast.)
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   startHomeworkQuest:
   - lines:
     - Hi Moowie! Do you know where Mom is?
     - She disappeared...
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Oh, I know where she went!
     - But I need you to do something for me first.
@@ -1060,7 +1060,7 @@ MonoBehaviour:
   - lines:
     - What is it?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Do you still remeber Flopsy?
     - She used to be beside me in your room, but I haven't seen her in a long while...
@@ -1070,7 +1070,7 @@ MonoBehaviour:
     - Of course I remeber her!
     - She was one of my favorites but Dad can't recall where he stored her...
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Do you think you're able to find her?
     - If I had to guess, I would say that she is in the house.
@@ -1081,7 +1081,7 @@ MonoBehaviour:
     - I will try my best to find her!
     - (I really want to see Mom)
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   duringHomeworkQuest:
   - lines:
     - If I had to guess, I would say that she is in the house.
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   - lines:
     - Moowie! I found Flopsy!
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Long time no see!
     title: Moowie
@@ -1109,7 +1109,7 @@ MonoBehaviour:
     - Anyways, Mom is still missing...
     - Where is she?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - I know where she is, follow me.
     title: Moowie
@@ -1125,7 +1125,7 @@ MonoBehaviour:
     - Hello again, Moowie.
     - That was so weird... What just happened?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - What you just witnessed was a memory. It was something that happened a while
       ago.
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     - Perhaps it has something to do with that...
     - Too bad she is still missing. I miss her...
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieBookInstance: {fileID: 11400000, guid: 015513ee889c5dd4992543b7197cde0d, type: 2}
   flopsyInstance: {fileID: 11400000, guid: 9ebc623b498252148a7a2fa9d12a2ab6, type: 2}
@@ -6202,7 +6202,7 @@ MonoBehaviour:
   - lines:
     - You truly do mirror.
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Yes, this is what I was made for.
     title: Mirror
@@ -6211,7 +6211,7 @@ MonoBehaviour:
     - Do you ever get tired of being a mirror?
     - Do you ever wish you were something else?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - No and no.
     title: Mirror
@@ -6220,7 +6220,7 @@ MonoBehaviour:
   - lines:
     - Mirror?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Yes?
     title: Mirror
@@ -6228,7 +6228,7 @@ MonoBehaviour:
   - lines:
     - Did Flopsy and Moowie go through you?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Perhaps...
     title: Mirror
@@ -6236,7 +6236,7 @@ MonoBehaviour:
   - lines:
     - (Perhaps I might try to enter the Mirror...)
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieVanished: deskHomeworkCompleted
   enterMirrorAllowed: enterMirrorAllowed
@@ -6395,7 +6395,7 @@ MonoBehaviour:
   - lines:
     - Mom?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - Hello, sweetie.
     title: Mom
@@ -6403,7 +6403,7 @@ MonoBehaviour:
   - lines:
     - Why are you here?
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - We're not in the Real World, this is your Dream World.
     - Anything that you imagine can be here!
@@ -6412,7 +6412,7 @@ MonoBehaviour:
   - lines:
     - This sounds fun! All my plushies are here!
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - You can talk with them! They might ask you a few requests and give you something
       back for them.
@@ -6421,7 +6421,7 @@ MonoBehaviour:
   - lines:
     - Woooooow.
     title: You
-    imagePath: placeholder
+    imagePath: eyesClosed
   - lines:
     - I think Moowie has a request for you. Talk to him.
     title: Mom

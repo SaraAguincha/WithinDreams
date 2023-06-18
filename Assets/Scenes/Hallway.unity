@@ -313,7 +313,7 @@ MonoBehaviour:
   - lines:
     - A simple table. Not much to see here.
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &109872642
@@ -625,9 +625,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - lines:
-    - This is a chair. People sit here!
+    - This is the chair mom loved to use.
+    - She used to sit here every morning happily writing something.
     title: 
-    imagePath: 
+    imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   unlockedMilestone: 
 --- !u!212 &515899601
@@ -1078,7 +1079,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0.00024425983, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -1894,7 +1895,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0.00024425983, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
