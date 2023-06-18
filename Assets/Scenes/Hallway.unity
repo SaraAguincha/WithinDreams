@@ -3755,7 +3755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4652501233939544806, guid: 70d61560bc28511408b07c7b0ebac159, type: 3}
       propertyPath: dialogues.Array.data[0].imagePath
-      value: placeholder
+      value: normalFace
       objectReference: {fileID: 0}
     - target: {fileID: 4652501233939544806, guid: 70d61560bc28511408b07c7b0ebac159, type: 3}
       propertyPath: dialogues.Array.data[0].lines.Array.size

@@ -1127,18 +1127,24 @@ MonoBehaviour:
     title: You
     imagePath: eyesClosed
   - lines:
-    - What you just witnessed was a memory. It was something that happened a while
+    - What you just saw was a memory. Don't you remember it? It happened a while
       ago.
-    - It's a way for you to find out what happened to your mom!
+    - This is the best way for you to find your mom!
     title: Moowie
     imagePath: 
   - lines:
-    - Oh ok, I get it now.
-    - I just learned that mom was writing a children's book about a princess and
-      you guys.
-    - And dad wasn't very supportive.
-    - Perhaps it has something to do with that...
+    - Oooh ok. For some reason I don't really remember it very well...
+    - It was weird. But now I know mommy was writing a book!
+    - Dad acted a bit weird about it tho. He usually is very lively but he seemed
+      a bit angry.
+    - Maybe he was hungry because it was almost lunch time!
     - Too bad she is still missing. I miss her...
+    - (Now that I think about it, it's lunch time. Dad is probably waiting for me)
+    title: You
+    imagePath: eyesClosed
+  firstParkCompleted:
+  - lines:
+    - (Dad is waiting for me. I should go.)
     title: You
     imagePath: eyesClosed
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
@@ -1158,6 +1164,7 @@ MonoBehaviour:
   homeworkAllSetMilestone: deskHomeworkAllSet
   completedHomeworkQuestMilestone: deskHomeworkCompleted
   afterFirstParkMilestone: momParkAfterDad
+  firstParkCompletedMilestone: firstParkCompleted
 --- !u!1 &641507659
 GameObject:
   m_ObjectHideFlags: 0

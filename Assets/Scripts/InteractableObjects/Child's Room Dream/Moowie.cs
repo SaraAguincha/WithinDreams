@@ -15,6 +15,7 @@ public class Moowie : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> homeworkAllSet;
     [SerializeField] List<Dialog> cutsceneDialogue;
     [SerializeField] List<Dialog> afterFirstParkQuest;
+    [SerializeField] List<Dialog> firstParkCompleted;
 
     [SerializeField] Milestones milestones;
 
@@ -43,6 +44,7 @@ public class Moowie : MonoBehaviour, Interactable
     public string homeworkAllSetMilestone;
     public string completedHomeworkQuestMilestone;
     public string afterFirstParkMilestone;
+    public string firstParkCompletedMilestone;
 
     private void Awake()
     {
@@ -66,9 +68,14 @@ public class Moowie : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(afterFirstParkMilestone))
+        if (milestones.getBoolMilestone(firstParkCompletedMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(firstParkCompleted));
+        }
+        else if (milestones.getBoolMilestone(afterFirstParkMilestone))
         {
             StartCoroutine(dialogueManager.ShowDialogue(afterFirstParkQuest));
+            milestones.addMilestone(firstParkCompletedMilestone, true);
         }
         else if (milestones.getBoolMilestone(homeworkAllSetMilestone))
         {

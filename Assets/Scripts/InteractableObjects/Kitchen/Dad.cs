@@ -5,20 +5,24 @@ using UnityEngine;
 public class Dad : MonoBehaviour, Interactable
 {
     // Dialogues
-    [SerializeField] List<Dialog> firstInteraction;           //Good mornings, and egg task
-    [SerializeField] List<Dialog> duringQuest;                //Reminder of egg task, and tip 
-    [SerializeField] List<Dialog> completedQuestBefore;       //Let's eat breakfast -> cutscene
-    [SerializeField] List<Dialog> completedQuestAfter;        //Let's eat breakfast -> cutscene
+    [SerializeField] List<Dialog> firstInteraction;             //Good mornings, and egg task
+    [SerializeField] List<Dialog> duringQuest;                  //Reminder of egg task, and tip 
+    [SerializeField] List<Dialog> completedQuestBefore;         //Let's eat breakfast -> cutscene
+    [SerializeField] List<Dialog> completedQuestAfter;          //Let's eat breakfast -> cutscene
     [SerializeField] List<Dialog> eating;
-    [SerializeField] List<Dialog> afterQuest;                 //Go do your homework for tomorrow
+    [SerializeField] List<Dialog> afterQuest;                   //Go do your homework for tomorrow
     [SerializeField] List<Dialog> flopsyQuestHelp;
     [SerializeField] List<Dialog> flopsyQuestHelpAfter;
+    [SerializeField] List<Dialog> firstParkCompleted;           //Ended first memory, lunch time, start lunch quest
+    [SerializeField] List<Dialog> startLunchQuest;
 
 
     [SerializeField] Milestones milestones;
 
     //[SerializeField] BooleanValue dadEggInstance;       //Verifies if the item was aquired
-    [SerializeField]  public GameObject dadEggInstance;
+    [SerializeField] public GameObject dadEggInstance;
+    [SerializeField] public GameObject dadPlateInstance;
+    [SerializeField] public GameObject girlPlateInstance;
 
     // Milestones names
     public string startQuestMilestone;
@@ -27,6 +31,9 @@ public class Dad : MonoBehaviour, Interactable
     public string disableArrowMilestone;
     public string flopsyQuestMilestone;
     public string afterFlopsyQuestMilestone;
+    public string firstParkCompletedMilestone;
+    public string startLunchQuestMilestone;
+    public string lunchQuestCompletedMilestone;
 
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
@@ -41,6 +48,11 @@ public class Dad : MonoBehaviour, Interactable
     private void Awake()
     {
         DialogueManager.OnCloseDialog += eggsAndBaconTrigger;
+
+        if (milestones.getBoolMilestone(firstParkCompletedMilestone)){
+            dadPlateInstance.SetActive(false);
+            girlPlateInstance.SetActive(false);
+        }
     }
 
     private void OnDestroy()
@@ -50,7 +62,16 @@ public class Dad : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(afterFlopsyQuestMilestone))
+        if (milestones.getBoolMilestone(startLunchQuestMilestone))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(startLunchQuest));
+        }
+        else if (milestones.getBoolMilestone(firstParkCompletedMilestone))
+        {
+            milestones.addMilestone(startLunchQuestMilestone, true);
+            StartCoroutine(dialogueManager.ShowDialogue(firstParkCompleted));
+        }
+        else if (milestones.getBoolMilestone(afterFlopsyQuestMilestone))
         {
             StartCoroutine(dialogueManager.ShowDialogue(flopsyQuestHelpAfter));
         }
