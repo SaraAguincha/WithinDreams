@@ -17,6 +17,7 @@ public class Dad : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> dadPlateLunchQuest;
     [SerializeField] List<Dialog> girlPlateLunchQuest;
     [SerializeField] List<Dialog> lunchQuestComplete;
+    [SerializeField] List<Dialog> afterLunchQuest;
 
 
 
@@ -38,6 +39,7 @@ public class Dad : MonoBehaviour, Interactable
     public string girlPlateLunchQuestMilestone;
     public string girlPlateDoneLunchQuestMilestone;
     public string lunchQuestCompletedMilestone;
+    public string afterLunchQuestMilestone;
 
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
@@ -61,8 +63,13 @@ public class Dad : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(lunchQuestCompletedMilestone))
+        if (milestones.getBoolMilestone(afterLunchQuestMilestone))
         {
+            StartCoroutine(dialogueManager.ShowDialogue(afterLunchQuest));
+        }
+        else if (milestones.getBoolMilestone(lunchQuestCompletedMilestone))
+        {
+            milestones.addMilestone(afterLunchQuestMilestone, true);
             StartCoroutine(dialogueManager.ShowDialogue(lunchQuestComplete));
         }   
         else if (milestones.getBoolMilestone(girlPlateDoneLunchQuestMilestone))

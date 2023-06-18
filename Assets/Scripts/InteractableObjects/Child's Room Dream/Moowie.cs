@@ -68,7 +68,11 @@ public class Moowie : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(firstParkCompletedMilestone))
+        if (milestones.getBoolMilestone("afterLunchQuestCompleted"))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(preInteraction));
+        }
+        else if (milestones.getBoolMilestone(firstParkCompletedMilestone))
         {
             StartCoroutine(dialogueManager.ShowDialogue(firstParkCompleted));
         }

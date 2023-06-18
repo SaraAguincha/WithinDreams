@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground.unity
     guid: 756165898ee80d743ada5e7104f04d0e
+  - enabled: 1
+    path: Assets/Scenes/Fluffy Bord Menu.unity
+    guid: e59b6fcbb10d825408da86a67f309976
+  - enabled: 1
+    path: Assets/Scenes/Fluffy Bord.unity
+    guid: a9918e51e985b80418f23c3a6de14055
   m_configObjects: {}
