@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Mom : MonoBehaviour, Interactable
 {
     [SerializeField] List<Dialog> firstDialogue;
+    [SerializeField] List<Dialog> afterFirstDialogue;
     [SerializeField] List<Dialog> parkDialogue;
     [SerializeField] List<Dialog> afterMailboxDialogue;
     [SerializeField] List<Dialog> afterFirstDadDialogue;
@@ -31,9 +32,15 @@ public class Mom : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        StartCoroutine(dialogueManager.ShowDialogue(firstDialogue));
 
         if (unlockedMilestone != "")
+        {
             milestones.addMilestone(unlockedMilestone, true);
+            StartCoroutine(dialogueManager.ShowDialogue(firstDialogue));
+        }
+        else
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(afterFirstDialogue));
+        }
     }
 }

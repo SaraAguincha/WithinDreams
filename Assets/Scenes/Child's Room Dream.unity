@@ -1024,10 +1024,14 @@ MonoBehaviour:
     title: Moowie
     imagePath: 
   - lines:
-    - '*starts reading a book passage*'
+    - '*opens the book*'
+    - '"Once upon a time, there was a fluffy cow named Moowie."'
+    - '"He had a friend he dearly loved, Flopsy"'
+    - Hmm, I'm not sure how to read the rest Moowie.. Sorry.
     title: You
     imagePath: eyesClosed
   - lines:
+    - It's okay!!
     - Words can't describe how happy I am!
     title: Moowie
     imagePath: 
@@ -6433,6 +6437,15 @@ MonoBehaviour:
     - I think Moowie has a request for you. Talk to him.
     title: Mom
     imagePath: 
+  afterFirstDialogue:
+  - lines:
+    - I think Moowie has a request for you. Talk to him.
+    title: Mom
+    imagePath: 
+  - lines:
+    - (Can Moowie really talk!?)
+    title: You
+    imagePath: eyesClosed
   parkDialogue: []
   afterMailboxDialogue: []
   afterFirstDadDialogue: []

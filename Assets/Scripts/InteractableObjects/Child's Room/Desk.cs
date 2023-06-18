@@ -19,7 +19,10 @@ public class Desk : MonoBehaviour, Interactable
         {
             StartCoroutine(dialogueManager.ShowDialogue(questDialogue));
             if (unlockedMilestone != "")
+            {
                 milestones.addMilestone(unlockedMilestone, true);
+                milestones.addMilestone("dreamWorldUnlocked", true);        // Can go to the dreamWorld once again
+            }
         }
         else
             StartCoroutine(dialogueManager.ShowDialogue(defaultDialogue));

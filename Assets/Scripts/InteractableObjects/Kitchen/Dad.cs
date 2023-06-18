@@ -91,6 +91,7 @@ public class Dad : MonoBehaviour, Interactable
         else if (milestones.getBoolMilestone(afterQuestMilestone))
         {
             milestones.addMilestone(disableArrowMilestone, true);
+            milestones.addMilestone("dreamWorldUnlocked", false);       // She should not be able to go to the dream world when she has to do homework
             StartCoroutine(dialogueManager.ShowDialogue(afterQuest));
         }
         else if (milestones.getBoolMilestone(completedQuestMilestone))
