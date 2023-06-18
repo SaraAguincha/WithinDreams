@@ -203,6 +203,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65521827}
   m_CullTransparentMesh: 1
+--- !u!1001 &72642669
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.570763
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33253187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.255709
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397442, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5519148406339397444, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
+      propertyPath: m_Name
+      value: GameSaveManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 21e1696c5fd82a541a2bbcfcae4202fd, type: 3}
 --- !u!1 &72964765
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351978294}
   - component: {fileID: 1351978296}
-  - component: {fileID: 1351978295}
+  - component: {fileID: 1351978297}
   m_Layer: 10
   m_Name: Wing
   m_TagString: Untagged
@@ -870,27 +927,6 @@ Transform:
   m_Father: {fileID: 72964767}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1351978295
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351978293}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec49acb905e13754bbf25e91f3944dbf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1351978296
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -943,6 +979,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1351978297
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351978293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec49acb905e13754bbf25e91f3944dbf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1564375739
 GameObject:
   m_ObjectHideFlags: 0

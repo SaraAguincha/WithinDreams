@@ -2081,7 +2081,7 @@ MonoBehaviour:
   questDialogue:
   - lines:
     - It's a bookshelf.
-    - It appears to have the book that Moowie asked you.
+    - It appears to have the book that Moowie asked you to retrieve.
     - You received Book.
     title: 
     imagePath: normalFace
