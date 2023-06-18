@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mailbox : MonoBehaviour, Interactable
+public class MoowieAndFlopsyPark : MonoBehaviour, Interactable
 {
     [SerializeField] List<Dialog> defaultDialogue;
     [SerializeField] List<Dialog> afterFirstMomTalkDialogue;
+    [SerializeField] List<Dialog> afterDadDialogue;
     [SerializeField] Milestones milestones;
 
     [SerializeField] string afterFirstMomTalk;
+    [SerializeField] string afterDadTalk;
     [SerializeField] string unlockedMomQuestMilestone;
 
     [SerializeField] public GameObject dad;
@@ -22,7 +24,11 @@ public class Mailbox : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(afterFirstMomTalk))
+        if (milestones.getBoolMilestone(afterDadTalk))
+        {
+            StartCoroutine(dialogueManager.ShowDialogue(afterDadDialogue));
+        }
+        else if (milestones.getBoolMilestone(afterFirstMomTalk))
         {
             StartCoroutine(dialogueManager.ShowDialogue(afterFirstMomTalkDialogue));
             milestones.addMilestone(unlockedMomQuestMilestone, true);

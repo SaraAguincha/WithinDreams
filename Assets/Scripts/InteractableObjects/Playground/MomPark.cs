@@ -12,7 +12,7 @@ public class MomPark : MonoBehaviour, Interactable
     [SerializeField] Milestones milestones;
 
     [SerializeField] string firstParkVisit;
-    [SerializeField] string afterMailbox;
+    [SerializeField] string afterToys;
 
     public string homeworkQuestMilestone;
     public string unlockedMilestone;
@@ -24,7 +24,7 @@ public class MomPark : MonoBehaviour, Interactable
         {
             StartCoroutine(dialogueManager.ShowDialogue(afterFirstDadDialogue));
         }
-        else if (milestones.getBoolMilestone(afterMailbox))
+        else if (milestones.getBoolMilestone(afterToys))
         {
             StartCoroutine(dialogueManager.ShowDialogue(afterMailboxDialogue));
             milestones.addMilestone(unlockedSecondParkMilestone, true);

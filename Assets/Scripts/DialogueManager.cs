@@ -100,11 +100,16 @@ public class DialogueManager : MonoBehaviour
 
         dialogueText.text = "";
         dialogueAudio.Play();
+        int auxLettersPerSecond = lettersPerSecond;
+        bool afterFirst = false;
         foreach (var letter in line.ToCharArray())
-        {     
+        {   if (Input.GetKeyDown(KeyCode.Z) && afterFirst)
+                lettersPerSecond = lettersPerSecond * 2;
             dialogueText.text += letter;
+            afterFirst = true;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
+        lettersPerSecond = auxLettersPerSecond;
         dialogueAudio.Stop();
         isTypingDialogue = false;
     }
