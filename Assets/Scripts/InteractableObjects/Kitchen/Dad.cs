@@ -14,15 +14,16 @@ public class Dad : MonoBehaviour, Interactable
     [SerializeField] List<Dialog> flopsyQuestHelp;
     [SerializeField] List<Dialog> flopsyQuestHelpAfter;
     [SerializeField] List<Dialog> firstParkCompleted;           //Ended first memory, lunch time, start lunch quest
-    [SerializeField] List<Dialog> startLunchQuest;
+    [SerializeField] List<Dialog> dadPlateLunchQuest;
+    [SerializeField] List<Dialog> girlPlateLunchQuest;
+    [SerializeField] List<Dialog> lunchQuestComplete;
+
 
 
     [SerializeField] Milestones milestones;
 
     //[SerializeField] BooleanValue dadEggInstance;       //Verifies if the item was aquired
     [SerializeField] public GameObject dadEggInstance;
-    [SerializeField] public GameObject dadPlateInstance;
-    [SerializeField] public GameObject girlPlateInstance;
 
     // Milestones names
     public string startQuestMilestone;
@@ -32,7 +33,10 @@ public class Dad : MonoBehaviour, Interactable
     public string flopsyQuestMilestone;
     public string afterFlopsyQuestMilestone;
     public string firstParkCompletedMilestone;
-    public string startLunchQuestMilestone;
+    public string dadPlateLunchQuestMilestone;
+    public string dadPlateDoneLunchQuestMilestone;
+    public string girlPlateLunchQuestMilestone;
+    public string girlPlateDoneLunchQuestMilestone;
     public string lunchQuestCompletedMilestone;
 
     public GameObject fadeInPanel;
@@ -48,11 +52,6 @@ public class Dad : MonoBehaviour, Interactable
     private void Awake()
     {
         DialogueManager.OnCloseDialog += eggsAndBaconTrigger;
-
-        if (milestones.getBoolMilestone(firstParkCompletedMilestone)){
-            dadPlateInstance.SetActive(false);
-            girlPlateInstance.SetActive(false);
-        }
     }
 
     private void OnDestroy()
@@ -62,13 +61,23 @@ public class Dad : MonoBehaviour, Interactable
 
     public void Interact(DialogueManager dialogueManager)
     {
-        if (milestones.getBoolMilestone(startLunchQuestMilestone))
+        if (milestones.getBoolMilestone(lunchQuestCompletedMilestone))
         {
-            StartCoroutine(dialogueManager.ShowDialogue(startLunchQuest));
+            StartCoroutine(dialogueManager.ShowDialogue(lunchQuestComplete));
+        }   
+        else if (milestones.getBoolMilestone(girlPlateDoneLunchQuestMilestone))
+        {
+            milestones.addMilestone(lunchQuestCompletedMilestone, true);
+            StartCoroutine(dialogueManager.ShowDialogue(girlPlateLunchQuest));
+        }
+        else if (milestones.getBoolMilestone(dadPlateDoneLunchQuestMilestone))
+        {
+            milestones.addMilestone(girlPlateLunchQuestMilestone, true);
+            StartCoroutine(dialogueManager.ShowDialogue(dadPlateLunchQuest));
         }
         else if (milestones.getBoolMilestone(firstParkCompletedMilestone))
         {
-            milestones.addMilestone(startLunchQuestMilestone, true);
+            milestones.addMilestone(dadPlateLunchQuestMilestone, true);
             StartCoroutine(dialogueManager.ShowDialogue(firstParkCompleted));
         }
         else if (milestones.getBoolMilestone(afterFlopsyQuestMilestone))
