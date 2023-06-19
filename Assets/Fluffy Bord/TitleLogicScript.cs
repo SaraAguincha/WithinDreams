@@ -19,4 +19,16 @@ public class TitleLogicScript : MonoBehaviour
         sceneInfo.setSceneName("House");
         SceneManager.LoadScene("House");
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            startGame();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            exitGame();
+        }
+    }
 }

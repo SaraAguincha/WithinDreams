@@ -15,15 +15,9 @@ public class PipeMiddleScript : MonoBehaviour
         bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == 3 && bird.isBirdAlive())
+        if(collision.gameObject.layer == 10 && bird.isBirdAlive())
         {
             logic.addScore(1);
         }
