@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         bool afterFirst = false;
         foreach (var letter in line.ToCharArray())
         {   if (Input.GetKeyDown(KeyCode.Z) && afterFirst)
-                lettersPerSecond = lettersPerSecond * 2;
+                lettersPerSecond = lettersPerSecond * 100;
             dialogueText.text += letter;
             afterFirst = true;
             yield return new WaitForSeconds(1f / lettersPerSecond);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System;
+using System.IO;
 
 [CreateAssetMenu]
 public class Milestones : SerializedScriptableObject
@@ -11,9 +12,9 @@ public class Milestones : SerializedScriptableObject
 
     // Metrics
 
-    public Dictionary<string, string> timeMilestones = new Dictionary<string, string>();
+    //public Dictionary<string, string> timeMilestones = new Dictionary<string, string>();
 
-    public Dictionary<string, int> numberOfInteractions = new Dictionary<string, int>();
+    //public Dictionary<string, int> numberOfInteractions = new Dictionary<string, int>();
 
     public bool getBoolMilestone(string milestone)
     {
@@ -32,17 +33,25 @@ public class Milestones : SerializedScriptableObject
         {
             boolMilestones.Add(name, value);
             DateTime currentDateTime = DateTime.Now;
-            string formattedDateTime = currentDateTime.ToString("HH:mm:ss");
-            timeMilestones.Add(name, formattedDateTime);
+            string formattedDateTime = currentDateTime.ToString("HH:mm:ss:fff");
+            
+            string fullPath = Application.persistentDataPath + "/timeMetric.txt";
+            using (StreamWriter writer = File.AppendText(fullPath))
+            {
+                string writeString = formattedDateTime + " " + name;
+                writer.WriteLine(writeString);  
+            }
         }
     }
 
     public void incrementInteraction(string interactableObject)
     {
-        if (numberOfInteractions.ContainsKey(interactableObject))
-            numberOfInteractions[interactableObject]++;
-        else
-            numberOfInteractions.Add(interactableObject, 1);
+        string fullPath = Application.persistentDataPath + "/interactMetric.txt";
+        using (StreamWriter writer = File.AppendText(fullPath))
+        {
+            string writeString = interactableObject;
+            writer.WriteLine(writeString);
+        }
     }
 
 }
