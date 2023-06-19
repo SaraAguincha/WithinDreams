@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
 
     public void HandleUpdate()
     {
+        // Metrics
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             requestPause?.Invoke();
@@ -153,11 +155,14 @@ public class PlayerController : MonoBehaviour
         if (interactableCollider != null)
         {
             interactableCollider.GetComponent<Interactable>()?.Interact(dialogManager);
+            // Metrics
+            milestones.incrementInteraction(interactableCollider.GetComponent<Interactable>().ToString());
         }
 
         else if (transitionCollider != null)
         {
             transitionCollider.GetComponent<Interactable>()?.Interact(dialogManager);
+            milestones.incrementInteraction(transitionCollider.GetComponent<Interactable>().ToString());
         }
 
         if (itemCollider != null)

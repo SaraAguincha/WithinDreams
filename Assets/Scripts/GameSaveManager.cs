@@ -29,6 +29,7 @@ public class GameSaveManager : MonoBehaviour
         {
             FileStream file = File.Create(Application.persistentDataPath +
                 string.Format("/{0}.dat", i));
+            //print(Application.persistentDataPath);
             BinaryFormatter binary = new BinaryFormatter();
             var json = JsonUtility.ToJson(objects[i]);
             binary.Serialize(file, json);
