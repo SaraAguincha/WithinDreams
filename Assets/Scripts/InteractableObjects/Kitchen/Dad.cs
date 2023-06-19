@@ -71,11 +71,13 @@ public class Dad : MonoBehaviour, Interactable
         {
             milestones.addMilestone(afterLunchQuestMilestone, true);
             StartCoroutine(dialogueManager.ShowDialogue(lunchQuestComplete));
-        }   
+        }
         else if (milestones.getBoolMilestone(girlPlateDoneLunchQuestMilestone))
         {
             milestones.addMilestone(lunchQuestCompletedMilestone, true);
             StartCoroutine(dialogueManager.ShowDialogue(girlPlateLunchQuest));
+            selfDialogueManager = dialogueManager;
+            cutsceneAllowed = true;
         }
         else if (milestones.getBoolMilestone(dadPlateDoneLunchQuestMilestone))
         {
@@ -152,7 +154,7 @@ public class Dad : MonoBehaviour, Interactable
         cutsceneManager.EndCutscene(fadeOutPanelInstance, 3);
 
         yield return new WaitForSeconds(0.5f);
-        yield return StartCoroutine(dialogueManager.ShowDialogue(completedQuestAfter)); 
+        yield return StartCoroutine(dialogueManager.ShowDialogue(completedQuestAfter));
         cutsceneAllowed = false;
     }
 }
