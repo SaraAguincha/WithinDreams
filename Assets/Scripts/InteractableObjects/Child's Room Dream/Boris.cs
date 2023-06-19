@@ -14,11 +14,13 @@ public class Boris : MonoBehaviour, Interactable
     public string afterLunchQuestMilestone;
     public string duringGameQuestMilestone;
     public string afterFluffyBordMilestone;
+    public string secondMirrorEnterMilestone;
 
     public void Interact(DialogueManager dialogueManager)
     {
         if (milestones.getBoolMilestone(afterFluffyBordMilestone))
         {
+            milestones.addMilestone(secondMirrorEnterMilestone, true);
             StartCoroutine(dialogueManager.ShowDialogue(afterFluffyBordQuest));
         }
         else if (milestones.getBoolMilestone(duringGameQuestMilestone))

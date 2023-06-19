@@ -5190,7 +5190,7 @@ MonoBehaviour:
   firstParkCompleted:
   - lines:
     - Hi pumpkin, what took you so long?
-    - I was about to go to call you.
+    - I was about to go call you.
     title: Dad
     imagePath: 
   - lines:
@@ -5200,7 +5200,7 @@ MonoBehaviour:
     imagePath: normalFace
   - lines:
     - Hahahaha. You've always loved to play with them.
-    - It's ok sweetie, so can you give daddy a hand?
+    - It's ok sweetie. So, can you give daddy a hand?
     - If you do, we can start eating lunch faster!
     title: Dad
     imagePath: 
@@ -5221,7 +5221,7 @@ MonoBehaviour:
     title: You
     imagePath: sadFace
   - lines:
-    - Thank you. Here, take my plate first. You remember where I sit?
+    - Thank you. Here, take my plate first. Do you remember where I sit?
     - It's the first counting from the left.
     title: Dad
     imagePath: 
@@ -5233,7 +5233,7 @@ MonoBehaviour:
   - lines:
     - Great, I can see it from here!
     - Now it's time for your plate. Here you have it sweetie.
-    - Remember you sit next to me. Be quick, I'm hungry.
+    - Remember that you sit next to me. Be quick, I'm hungry.
     title: Dad
     imagePath: 
   - lines:

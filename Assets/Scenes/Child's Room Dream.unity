@@ -1131,18 +1131,17 @@ MonoBehaviour:
     title: You
     imagePath: eyesClosed
   - lines:
-    - What you just saw was a memory. Don't you remember it? It happened a while
-      ago.
-    - This is the best way for you to find your mom!
+    - What you just saw was a memory. Don't you remember? It happened a while ago.
+    - This is the best way for you to find your mom and what happened to her!
     title: Moowie
     imagePath: 
   - lines:
-    - Oooh ok. For some reason I don't really remember it very well...
+    - Oooh ok. For some reason I don't remember it very well...
     - It was weird. But now I know mommy was writing a book!
-    - Dad acted a bit weird about it tho. He usually is very lively but he seemed
+    - Dad acted a bit weird about it, though. He is usually very lively but he seemed
       a bit angry.
     - Maybe he was hungry because it was almost lunch time!
-    - Too bad she is still missing. I miss her...
+    - Too bad Mom is still missing. I miss her...
     - (Now that I think about it, it's lunch time. Dad is probably waiting for me)
     title: You
     imagePath: eyesClosed
@@ -4526,7 +4525,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.047016144, y: -0.52620715}
+  m_Offset: {x: -0.015184522, y: 0.075012505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4537,7 +4536,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2185655, y: 2.3345437}
+  m_Size: {x: 2.0941641, y: 2.3345442}
   m_EdgeRadius: 0
 --- !u!212 &1728239956
 SpriteRenderer:
@@ -4664,13 +4663,14 @@ MonoBehaviour:
     imagePath: eyesClosed
   - lines:
     - No problem. Just knowing you had fun is more that enough!
-    - Now, follow me into the mirror.
+    - Now, just go into the mirror and unlock a new memory!
     title: Boris
     imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   afterLunchQuestMilestone: afterLunchQuestCompleted
   duringGameQuestMilestone: duringGameQuest
   afterFluffyBordMilestone: afterFluffyBord
+  secondMirrorEnterMilestone: secondMirrorEnterAllowed
 --- !u!1 &1767602511
 GameObject:
   m_ObjectHideFlags: 0
@@ -6485,10 +6485,16 @@ MonoBehaviour:
     - (Perhaps I might try to enter the Mirror...)
     title: You
     imagePath: eyesClosed
+  secondMirrorEnterDialogue:
+  - lines:
+    - That is all for now. More to come soon. Thanks for playing our game!
+    title: Developers
+    imagePath: 
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}
   moowieVanished: deskHomeworkCompleted
   enterMirrorAllowed: enterMirrorAllowed
   afterFirstParkQuest: momParkAfterDad
+  secondMirrorEnterMilestone: secondMirrorEnterAllowed
   playerPosition: {x: 7, y: 0}
   playerInfo: {fileID: 11400000, guid: 63d25a0c12b9511468b04fe3481ecc82, type: 2}
   sceneInfo: {fileID: 11400000, guid: 89d3c77d9f8a883479add67dcf7e797d, type: 2}
