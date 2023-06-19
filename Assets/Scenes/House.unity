@@ -5208,7 +5208,7 @@ MonoBehaviour:
     - Sure thing, Dad! What do you need?
     - Will you finally let me cook!!??
     title: You
-    imagePath: normalFace
+    imagePath: excitedFace
   - lines:
     - Hahaha, you never give up do you?
     - But no sweetheart, for now the only help I need is to set the table.
@@ -5219,7 +5219,7 @@ MonoBehaviour:
     - Ooh... It's ok, I didn't want to cook anyways...
     - I'll set the table then!
     title: You
-    imagePath: normalFace
+    imagePath: sadFace
   - lines:
     - Thank you. Here, take my plate first. You remember where I sit?
     - It's the first counting from the left.
@@ -5766,8 +5766,12 @@ MonoBehaviour:
     - It's a cabinet.
     - It appears to have the friend that Moowie asked you to retrieve!
     - You have grabbed Flopsy.
-    title: 
+    title: You
     imagePath: normalFace
+  - lines:
+    - (Yey!! I'll tell Moowie right away).
+    title: You
+    imagePath: excitedFace
   questCompletedDialogue:
   - lines:
     - It's a cabinet. It stores stuff.
