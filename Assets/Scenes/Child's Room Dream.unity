@@ -3287,6 +3287,10 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 701470886}
+    - target: {fileID: 7496395481527516762, guid: c70b5409f62faa24089042992369911d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 11ec0ce20386bc248a725d428f70fb69, type: 2}
     - target: {fileID: 7496395481527516765, guid: c70b5409f62faa24089042992369911d, type: 3}
       propertyPath: m_Name
       value: Player
