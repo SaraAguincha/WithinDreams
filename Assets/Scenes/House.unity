@@ -5199,18 +5199,18 @@ MonoBehaviour:
     title: You
     imagePath: normalFace
   - lines:
-    - Hahahaha. You've always loved to play with them.
+    - Haha. You've always loved to play with them.
     - It's ok sweetie. So, can you give daddy a hand?
     - If you do, we can start eating lunch faster!
     title: Dad
     imagePath: 
   - lines:
     - Sure thing, Dad! What do you need?
-    - Will you finally let me cook!!??
+    - Will you finally let me cook?!
     title: You
     imagePath: excitedFace
   - lines:
-    - Hahaha, you never give up do you?
+    - Haha, you never give up do you?
     - But no sweetheart, for now the only help I need is to set the table.
     - Sorry to disappoint.
     title: Dad
@@ -5257,15 +5257,15 @@ MonoBehaviour:
     title: You
     imagePath: normalFace
   - lines:
-    - HaHaHaHa, seems like my hard work paid off. I'm happy you can eat your veggies
+    - Haha, seems like my hard work paid off. I'm happy you can eat your veggies
       now.
     - Well, daddy will now have to clean the kitchen and tidy up some things.
     - Feel free to go play sweetie, no need to help.
     title: Dad
     imagePath: 
   - lines:
-    - Yiipii!! I'll go play then!
-    - (I have to see if any other plushie need my help!!)
+    - Yiipii! I'll go play then!
+    - (I have to see if any other plushie need my help!)
     title: You
     imagePath: normalFace
   afterLunchQuest:
@@ -5274,8 +5274,8 @@ MonoBehaviour:
     title: Dad
     imagePath: 
   - lines:
-    - Yiipii!! I'll go play then!
-    - (I have to see if any other plushie need my help!!)
+    - Yiipii! I'll go play then!
+    - (I have to see if any other plushie need my help!)
     title: You
     imagePath: normalFace
   milestones: {fileID: 11400000, guid: d7626f723a01ac84ba94dd1e15f6a1d1, type: 2}

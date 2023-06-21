@@ -272,12 +272,10 @@ MonoBehaviour:
   parkDialogue:
   - lines:
     - Hi Mom!
-    - I've finally found you!
-    - I missed you...
     title: You
     imagePath: normalFace
   - lines:
-    - I missed you too, sweetie.
+    - Hi there, sweetie!
     title: Mom
     imagePath: 
   - lines:
